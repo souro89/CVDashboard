@@ -1,0 +1,3452 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/images/favicon.png"
+    />
+    <title>Dashboard</title>
+    <!-- Custom CSS -->
+    <link
+      href="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/libs/chartist/dist/chartist.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/extra-libs/c3/c3.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link
+      href="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../dist/css/style.min.css"
+      rel="stylesheet"
+    />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+      <div class="lds-ripple">
+        <div class="lds-pos"></div>
+        <div class="lds-pos"></div>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+      <!-- ============================================================== -->
+      <!-- Topbar header - style you can find in pages.scss -->
+      <!-- ============================================================== -->
+      <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+          <div class="navbar-header">
+            <!-- This is for the sidebar toggle which is visible on mobile only -->
+            <a
+              class="nav-toggler waves-effect waves-light d-block d-md-none"
+              href="javascript:void(0)"
+              ><i class="ti-menu ti-close"></i
+            ></a>
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <a
+              class="navbar-brand"
+              href="demos/admin-templates/xtreme-admin/html/mini-sidebar/index.html"
+            >
+              <!-- Logo icon -->
+              <b class="logo-icon">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img
+                  src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/images/logo-icon.png"
+                  alt="homepage"
+                  class="dark-logo"
+                />
+                <!-- Light Logo icon -->
+                <img
+                  src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/images/logo-light-icon.png"
+                  alt="homepage"
+                  class="light-logo"
+                />
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text">
+                <!-- dark Logo text -->
+                <img
+                  src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/images/logo-light-text_removed.png"
+                  alt=""
+                  class="dark-logo"
+                />
+                <!-- Light Logo text -->
+                <img
+                  src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/images/logo-light-text_removed.png"
+                  class="light-logo"
+                  alt="CIO Dashboard"
+                />
+              </span>
+            </a>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- ============================================================== -->
+            <a
+              class="topbartoggler d-block d-md-none waves-effect waves-light"
+              href="javascript:void(0)"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              ><i class="ti-more"></i
+            ></a>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Logo -->
+          <!-- ============================================================== -->
+          <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav float-left mr-auto">
+              <li class="nav-item d-none d-md-block">
+                <a
+                  class="nav-link sidebartoggler waves-effect waves-light"
+                  href="javascript:void(0)"
+                  data-sidebartype="mini-sidebar"
+                  ><i class="mdi mdi-menu font-24"></i
+                ></a>
+              </li>
+              <!-- ============================================================== -->
+              <!-- mega menu -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown mega-dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark"
+                  href=""
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="d-none d-md-block">HR Dashboard</span>
+                </a>
+              </li>
+            </ul>
+            <!-- ============================================================== -->
+            <!-- Right side toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav float-right">
+              <!-- ============================================================== -->
+              <!-- create new -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown2"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="flag-icon flag-icon-ae"></i>
+                </a>
+                <!-- <div class="dropdown-menu dropdown-menu-right  animated bounceInDown" aria-labelledby="navbarDropdown2">
+                                <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-us"></i> English</a>
+                                <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> French</a>
+                                <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-es"></i> Spanish</a>
+                                <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-de"></i> German</a>
+                            </div> -->
+              </li>
+              <!-- ============================================================== -->
+              <!-- Comment -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark"
+                  href=""
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  onclick="callgraph()"
+                >
+                  <i class="mdi mdi-bell font-24"></i>
+                </a>
+              </li>
+              <!-- ============================================================== -->
+              <!-- End Comment -->
+              <!-- ============================================================== -->
+              <!-- ============================================================== -->
+              <!-- Messages -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark"
+                  href=""
+                  id="2"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="font-24 mdi mdi-comment-processing"></i>
+                </a>
+              </li>
+              <!-- ============================================================== -->
+              <!-- End Messages -->
+              <!-- ============================================================== -->
+              <!-- ============================================================== -->
+              <!-- User profile and search -->
+              <!-- ============================================================== -->
+              <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                                <span class="with-arrow"><span class="bg-primary"></span></span>
+                                <div class="d-flex no-block align-items-center p-15 bg-primary text-white m-b-10">
+                                    <div class=""><img src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/images/users/1.jpg" alt="user" class="img-circle" width="60"></div>
+                                    <div class="m-l-10">
+                                        <h4 class="m-b-0">Steave Jobs</h4>
+                                        <p class=" m-b-0">varun@gmail.com</p>
+                                    </div>
+                                </div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i> Inbox</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                <div class="dropdown-divider"></div>
+                                <div class="p-l-30 p-10"><a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View Profile</a></div>
+                            </div>
+                        </li> -->
+              <!-- ============================================================== -->
+              <!-- User profile and search -->
+              <!-- ============================================================== -->
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+              <!-- User Profile-->
+              <li>
+                <!-- User Profile-->
+                <!-- <div class="user-profile d-flex no-block dropdown m-t-20">
+                                <div class="user-pic"><img src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/images/users/1.jpg" alt="users" class="rounded-circle" width="40" /></div>
+                                <div class="user-content hide-menu m-l-10">
+                                    <a href="javascript:void(0)" class="" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <h5 class="m-b-0 user-name font-medium">Steave Jobs <i class="fa fa-angle-down"></i></h5>
+                                        <span class="op-5 user-email">varun@gmail.com</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Userdd">
+                                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i> Inbox</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                    </div>
+                                </div>
+                            </div> -->
+                <!-- End User Profile-->
+              </li>
+              <!-- <li class="p-15 m-t-10"><a href="javascript:void(0)" class="btn btn-block create-btn text-white no-block d-flex align-items-center"><i class="fa fa-plus-square"></i> <span class="hide-menu m-l-5">Create New</span> </a></li> -->
+              <!-- User Profile-->
+              <li class="nav-small-cap">
+                <i class="mdi mdi-dots-horizontal"></i>
+                <span class="hide-menu">Summary</span>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-view-dashboard"></i
+                  ><span class="hide-menu">Dashboard</span></a
+                >
+                <ul aria-expanded="false" class="collapse  first-level">
+                  <li class="sidebar-item">
+                    <a
+                      href="demos/admin-templates/xtreme-admin/html/mini-sidebar/index.html"
+                      class="sidebar-link"
+                      ><i class="mdi mdi-adjust"></i
+                      ><span class="hide-menu"> KPI Metrics </span></a
+                    >
+                  </li>
+                  <!-- <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/index2.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> Analytical </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/index3.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> Cryptocurrency </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/index4.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> Overview </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/index5.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> E-Commerce </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/index6.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> Sales </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/index7.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> General </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/index8.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> Trendy </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/index9.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> Campaign </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/index10.html" class="sidebar-link"><i class="mdi mdi-adjust"></i><span class="hide-menu"> Modern </span></a></li> -->
+                </ul>
+              </li>
+              <!-- <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-tune-vertical"></i><span class="hide-menu">Sidebar Type </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/sidebar-type-minisidebar.html" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu"> Minisidebar </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/sidebar-type-iconsidebar.html" class="sidebar-link"><i class="mdi mdi-view-parallel"></i><span class="hide-menu"> Icon Sidebar </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/sidebar-type-overlaysidebar.html" class="sidebar-link"><i class="mdi mdi-view-day"></i><span class="hide-menu"> Overlay Sidebar </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/sidebar-type-fullsidebar.html" class="sidebar-link"><i class="mdi mdi-view-array"></i><span class="hide-menu"> Full Sidebar </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/sidebar-type-horizontalsidebar.html" class="sidebar-link"><i class="mdi mdi-view-module"></i><span class="hide-menu"> Horizontal Sidebar </span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-content-copy"></i><span class="hide-menu">Page Layouts </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/layout-inner-fixed-left-sidebar.html" class="sidebar-link"><i class="mdi mdi-format-align-left"></i><span class="hide-menu"> Inner Fixed Left Sidebar </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/layout-inner-fixed-right-sidebar.html" class="sidebar-link"><i class="mdi mdi-format-align-right"></i><span class="hide-menu"> Inner Fixed Right Sidebar </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/layout-inner-left-sidebar.html" class="sidebar-link"><i class="mdi mdi-format-float-left"></i><span class="hide-menu"> Inner Left Sidebar </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/layout-inner-right-sidebar.html" class="sidebar-link"><i class="mdi mdi-format-float-right"></i><span class="hide-menu"> Inner Right Sidebar </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/page-layout-fixed-header.html" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu"> Fixed Header </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/page-layout-fixed-sidebar.html" class="sidebar-link"><i class="mdi mdi-view-parallel"></i><span class="hide-menu"> Fixed Sidebar </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/page-layout-fixed-header-sidebar.html" class="sidebar-link"><i class="mdi mdi-view-column"></i><span class="hide-menu"> Fixed Header &amp; Sidebar </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/page-layout-boxed-layout.html" class="sidebar-link"><i class="mdi mdi-view-carousel"></i><span class="hide-menu"> Box Layout </span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Apps</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-inbox-arrow-down"></i><span class="hide-menu">Inbox </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/inbox-email.html" class="sidebar-link"><i class="mdi mdi-email"></i><span class="hide-menu"> Email </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/inbox-email-detail.html" class="sidebar-link"><i class="mdi mdi-email-alert"></i><span class="hide-menu"> Email Detail </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/inbox-email-compose.html" class="sidebar-link"><i class="mdi mdi-email-secure"></i><span class="hide-menu"> Email Compose </span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-bookmark-plus-outline"></i><span class="hide-menu">Ticket </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ticket-list.html" class="sidebar-link"><i class="mdi mdi-book-multiple"></i><span class="hide-menu"> Ticket List </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ticket-detail.html" class="sidebar-link"><i class="mdi mdi-book-plus"></i><span class="hide-menu"> Ticket Detail </span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-gradient"></i><span class="hide-menu">Extra </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/app-chats.html" class="sidebar-link"><i class="mdi mdi-comment-processing-outline"></i><span class="hide-menu"> Chats Apps </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/app-calendar.html" class="sidebar-link"><i class="mdi mdi-calendar"></i><span class="hide-menu"> Calender </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/app-taskboard.html" class="sidebar-link"><i class="mdi mdi-bulletin-board"></i><span class="hide-menu"> Taskboard </span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">UI</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Ui Elements </span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-buttons.html" class="sidebar-link"><i class="mdi mdi-toggle-switch"></i><span class="hide-menu"> Buttons</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-modals.html" class="sidebar-link"><i class="mdi mdi-tablet"></i><span class="hide-menu"> Modals</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-tab.html" class="sidebar-link"><i class="mdi mdi-sort-variant"></i><span class="hide-menu"> Tab</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-tooltip-popover.html" class="sidebar-link"><i class="mdi mdi-image-filter-vintage"></i><span class="hide-menu"> Tooltip &amp; Popover</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-notification.html" class="sidebar-link"><i class="mdi mdi-message-bulleted"></i><span class="hide-menu"> Notification</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-progressbar.html" class="sidebar-link"><i class="mdi mdi-poll"></i><span class="hide-menu"> Progressbar</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-typography.html" class="sidebar-link"><i class="mdi mdi-format-line-spacing"></i><span class="hide-menu"> Typography</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-bootstrap.html" class="sidebar-link"><i class="mdi mdi-bootstrap"></i><span class="hide-menu"> Bootstrap Ui</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-breadcrumb.html" class="sidebar-link"><i class="mdi mdi-equal"></i><span class="hide-menu"> Breadcrumb</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-list-media.html" class="sidebar-link"><i class="mdi mdi-file-video"></i><span class="hide-menu"> List Media</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-grid.html" class="sidebar-link"><i class="mdi mdi-view-module"></i><span class="hide-menu"> Grid</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-carousel.html" class="sidebar-link"><i class="mdi mdi-view-carousel"></i><span class="hide-menu"> Carousel</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-credit-card-multiple"></i><span class="hide-menu">Cards</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-cards.html" class="sidebar-link"><i class="mdi mdi-layers"></i><span class="hide-menu"> Basic Cards</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-card-customs.html" class="sidebar-link"><i class="mdi mdi-credit-card-scan"></i><span class="hide-menu">Custom Cards</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-card-weather.html" class="sidebar-link"><i class="mdi mdi-weather-fog"></i><span class="hide-menu">Weather Cards</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-card-draggable.html" class="sidebar-link"><i class="mdi mdi-bandcamp"></i><span class="hide-menu">Draggable Cards</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-credit-card-multiple"></i><span class="hide-menu">Components</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/component-sweetalert.html" class="sidebar-link"><i class="mdi mdi-layers"></i><span class="hide-menu"> Sweet Alert</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/component-nestable.html" class="sidebar-link"><i class="mdi mdi-credit-card-scan"></i><span class="hide-menu">Nestable</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/component-noui-slider.html" class="sidebar-link"><i class="mdi mdi-weather-fog"></i><span class="hide-menu">Noui slider</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/component-rating.html" class="sidebar-link"><i class="mdi mdi-bandcamp"></i><span class="hide-menu">Rating</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/component-toastr.html" class="sidebar-link"><i class="mdi mdi-poll"></i><span class="hide-menu">Toastr</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-gradient"></i><span class="hide-menu">Widgets </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/widgets-apps.html" class="sidebar-link"><i class="mdi mdi-comment-processing-outline"></i><span class="hide-menu"> Apps Widgets  </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/widgets-data.html" class="sidebar-link"><i class="mdi mdi-calendar"></i><span class="hide-menu"> Data Widgets  </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/widgets-charts.html" class="sidebar-link"><i class="mdi mdi-bulletin-board"></i><span class="hide-menu"> Charts Widgets</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Forms</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">Form Elements</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-inputs.html" class="sidebar-link"><i class="mdi mdi-priority-low"></i><span class="hide-menu"> Forms Input</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-input-groups.html" class="sidebar-link"><i class="mdi mdi-rounded-corner"></i><span class="hide-menu"> Input Groups</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-input-grid.html" class="sidebar-link"><i class="mdi mdi-select-all"></i><span class="hide-menu"> Input Grid</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-checkbox-radio.html" class="sidebar-link"><i class="mdi mdi-shape-plus"></i><span class="hide-menu"> Checkboxes &amp; Radios</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-bootstrap-touchspin.html" class="sidebar-link"><i class="mdi mdi-switch"></i><span class="hide-menu"> Bootstrap Touchspin</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-bootstrap-switch.html" class="sidebar-link"><i class="mdi mdi-toggle-switch-off"></i><span class="hide-menu"> Bootstrap Switch</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-select2.html" class="sidebar-link"><i class="mdi mdi-relative-scale"></i><span class="hide-menu"> Select2</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-dual-listbox.html" class="sidebar-link"><i class="mdi mdi-tab-unselected"></i><span class="hide-menu"> Dual Listbox</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Form Layouts</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-basic.html" class="sidebar-link"><i class="mdi mdi-vector-difference-ba"></i><span class="hide-menu"> Basic Forms</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-horizontal.html" class="sidebar-link"><i class="mdi mdi-file-document-box"></i><span class="hide-menu"> Form Horizontal</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-actions.html" class="sidebar-link"><i class="mdi mdi-code-greater-than"></i><span class="hide-menu"> Form Actions</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-row-separator.html" class="sidebar-link"><i class="mdi mdi-code-equal"></i><span class="hide-menu"> Row Separator</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-bordered.html" class="sidebar-link"><i class="mdi mdi-flip-to-front"></i><span class="hide-menu"> Form Bordered</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-striped-row.html" class="sidebar-link"><i class="mdi mdi-content-duplicate"></i><span class="hide-menu"> Striped Rows</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-detail.html" class="sidebar-link"><i class="mdi mdi-cards-outline"></i><span class="hide-menu"> Form Detail</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-code-equal"></i><span class="hide-menu">Form Addons</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-paginator.html" class="sidebar-link"><i class="mdi mdi-export"></i><span class="hide-menu"> Paginator</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-img-cropper.html" class="sidebar-link"><i class="mdi mdi-crop"></i><span class="hide-menu"> Image Cropper</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-dropzone.html" class="sidebar-link"><i class="mdi mdi-crosshairs-gps"></i><span class="hide-menu"> Dropzone</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-mask.html" class="sidebar-link"><i class="mdi mdi-box-shadow"></i><span class="hide-menu"> Form Mask</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-typeahead.html" class="sidebar-link"><i class="mdi mdi-cards-variant"></i><span class="hide-menu"> Form Typehead</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-alert-box"></i><span class="hide-menu">Form Validation</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-bootstrap-validation.html" class="sidebar-link"><i class="mdi mdi-credit-card-scan"></i><span class="hide-menu"> Bootstrap Validation</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-custom-validation.html" class="sidebar-link"><i class="mdi mdi-credit-card-plus"></i><span class="hide-menu"> Custom Validation</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-pencil-box-outline"></i><span class="hide-menu">Form Pickers</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-picker-colorpicker.html" class="sidebar-link"><i class="mdi mdi-calendar-plus"></i><span class="hide-menu"> Form Colorpicker</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-picker-datetimepicker.html" class="sidebar-link"><i class="mdi mdi-calendar-clock"></i><span class="hide-menu"> Form Datetimepicker</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-picker-bootstrap-rangepicker.html" class="sidebar-link"><i class="mdi mdi-calendar-range"></i><span class="hide-menu"> Form Bootstrap Rangepicker</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-picker-bootstrap-datepicker.html" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> Form Bootstrap Datepicker</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-picker-material-datepicker.html" class="sidebar-link"><i class="mdi mdi-calendar-text"></i><span class="hide-menu"> Form Material Datepicker</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-dns"></i><span class="hide-menu">Form Editor</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-editor-ckeditor.html" class="sidebar-link"><i class="mdi mdi-drawing"></i><span class="hide-menu">Ck Editor</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-editor-quill.html" class="sidebar-link"><i class="mdi mdi-drupal"></i><span class="hide-menu">Quill Editor</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-editor-summernote.html" class="sidebar-link"><i class="mdi mdi-brightness-6"></i><span class="hide-menu">Summernote Editor</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-editor-tinymce.html" class="sidebar-link"><i class="mdi mdi-bowling"></i><span class="hide-menu">Tinymce Edtor</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-wizard.html" aria-expanded="false"><i class="mdi mdi-cube-send"></i><span class="hide-menu">Form Wizard</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="demos/admin-templates/xtreme-admin/html/mini-sidebar/form-repeater.html" aria-expanded="false"><i class="mdi mdi-creation"></i><span class="hide-menu">Form Repeater</span></a></li>
+                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Tables</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-border-none"></i><span class="hide-menu">Bootstrap Tables</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/table-basic.html" class="sidebar-link"><i class="mdi mdi-border-all"></i><span class="hide-menu">Basic Table </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/table-dark-basic.html" class="sidebar-link"><i class="mdi mdi-border-left"></i><span class="hide-menu">Dark Basic Table </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/table-sizing.html" class="sidebar-link"><i class="mdi mdi-border-outside"></i><span class="hide-menu">Sizing Table </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/table-layout-coloured.html" class="sidebar-link"><i class="mdi mdi-border-bottom"></i><span class="hide-menu">Coloured Table Layout</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span class="hide-menu">Datatables</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/table-datatable-basic.html" class="sidebar-link"><i class="mdi mdi-border-vertical"></i><span class="hide-menu"> Basic Initialisation</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/table-datatable-api.html" class="sidebar-link"><i class="mdi mdi-blur-linear"></i><span class="hide-menu"> API</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/table-datatable-advanced.html" class="sidebar-link"><i class="mdi mdi-border-style"></i><span class="hide-menu"> Advanced Initialisation</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="demos/admin-templates/xtreme-admin/html/mini-sidebar/table-jsgrid.html" aria-expanded="false"><i class="mdi mdi-border-top"></i><span class="hide-menu">Table Jsgrid</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="demos/admin-templates/xtreme-admin/html/mini-sidebar/table-responsive.html" aria-expanded="false"><i class="mdi mdi-border-style"></i><span class="hide-menu">Table Responsive</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="demos/admin-templates/xtreme-admin/html/mini-sidebar/table-footable.html" aria-expanded="false"><i class="mdi mdi-tab-unselected"></i><span class="hide-menu">Table Footable</span></a></li>
+                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Charts</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="demos/admin-templates/xtreme-admin/html/mini-sidebar/chart-morris.html" aria-expanded="false"><i class="mdi mdi-image-filter-tilt-shift"></i><span class="hide-menu"> Morris Chart</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="demos/admin-templates/xtreme-admin/html/mini-sidebar/chart-chart-js.html" aria-expanded="false"><i class="mdi mdi-svg"></i><span class="hide-menu">Chartjs</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="demos/admin-templates/xtreme-admin/html/mini-sidebar/chart-sparkline.html" aria-expanded="false"><i class="mdi mdi-chart-histogram"></i><span class="hide-menu">Sparkline Chart</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="demos/admin-templates/xtreme-admin/html/mini-sidebar/chart-chartist.html" aria-expanded="false"><i class="mdi mdi-blur"></i><span class="hide-menu">Chartis Chart</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chemical-weapon"></i><span class="hide-menu">C3 Charts</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/chart-c3-axis.html" class="sidebar-link"><i class="mdi mdi-arrange-bring-to-front"></i> <span class="hide-menu">Axis Chart</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/chart-c3-bar.html" class="sidebar-link"><i class="mdi mdi-arrange-send-to-back"></i> <span class="hide-menu">Bar Chart</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/chart-c3-data.html" class="sidebar-link"><i class="mdi mdi-backup-restore"></i> <span class="hide-menu">Data Chart</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/chart-c3-line.html" class="sidebar-link"><i class="mdi mdi-backburger"></i> <span class="hide-menu">Line Chart</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chart-areaspline"></i><span class="hide-menu">Echarts</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/chart-echart-basic.html" class="sidebar-link"><i class="mdi mdi-chart-line"></i> <span class="hide-menu">Basic Charts</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/chart-echart-bar.html" class="sidebar-link"><i class="mdi mdi-chart-scatterplot-hexbin"></i> <span class="hide-menu">Bar Chart</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/chart-echart-pie-doughnut.html" class="sidebar-link"><i class="mdi mdi-chart-pie"></i> <span class="hide-menu">Pie &amp; Doughnut Chart</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Sample Pages</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-cart-outline"></i><span class="hide-menu">Ecommerce Pages</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/eco-products.html" class="sidebar-link"><i class="mdi mdi-cards-variant"></i> <span class="hide-menu">Products</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/eco-products-cart.html" class="sidebar-link"><i class="mdi mdi-cart"></i> <span class="hide-menu">Products Cart</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/eco-products-edit.html" class="sidebar-link"><i class="mdi mdi-cart-plus"></i> <span class="hide-menu">Products Edit</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/eco-products-detail.html" class="sidebar-link"><i class="mdi mdi-camera-burst"></i> <span class="hide-menu">Product Details</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/eco-products-orders.html" class="sidebar-link"><i class="mdi mdi-chart-pie"></i> <span class="hide-menu">Product Orders</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/eco-products-checkout.html" class="sidebar-link"><i class="mdi mdi-clipboard-check"></i> <span class="hide-menu">Products Checkout</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Sample Pages </span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/starter-kit.html" class="sidebar-link"><i class="mdi mdi-crop-free"></i> <span class="hide-menu">Starter Kit</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/pages-animation.html" class="sidebar-link"><i class="mdi mdi-debug-step-over"></i> <span class="hide-menu">Animation</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/pages-search-result.html" class="sidebar-link"><i class="mdi mdi-search-web"></i> <span class="hide-menu">Search Result</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/pages-gallery.html" class="sidebar-link"><i class="mdi mdi-camera-iris"></i> <span class="hide-menu">Gallery</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/pages-treeview.html" class="sidebar-link"><i class="mdi mdi-file-tree"></i> <span class="hide-menu">Treeview</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/pages-block-ui.html" class="sidebar-link"><i class="mdi mdi-codepen"></i> <span class="hide-menu">Block UI</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/pages-session-timeout.html" class="sidebar-link"><i class="mdi mdi-timer-off"></i> <span class="hide-menu">Session Timeout</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/pages-session-idle-timeout.html" class="sidebar-link"><i class="mdi mdi-timer-sand-empty"></i> <span class="hide-menu">Session Idle Timeout</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/pages-utility-classes.html" class="sidebar-link"><i class="mdi mdi-tune"></i> <span class="hide-menu">Helper Classes</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/pages-maintenance.html" class="sidebar-link"><i class="mdi mdi-camera-iris"></i> <span class="hide-menu">Maintenance Page</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-circle"></i><span class="hide-menu">Authentication</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/authentication-login1.html" class="sidebar-link"><i class="mdi mdi-account-key"></i><span class="hide-menu"> Login </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/authentication-login2.html" class="sidebar-link"><i class="mdi mdi-account-key"></i><span class="hide-menu"> Login 2 </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/authentication-register1.html" class="sidebar-link"><i class="mdi mdi-account-plus"></i><span class="hide-menu"> Register</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/authentication-register2.html" class="sidebar-link"><i class="mdi mdi-account-plus"></i><span class="hide-menu"> Register 2</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/authentication-lockscreen.html" class="sidebar-link"><i class="mdi mdi-account-off"></i><span class="hide-menu"> Lockscreen</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/authentication-recover-password.html" class="sidebar-link"><i class="mdi mdi-account-convert"></i><span class="hide-menu"> Recover password</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Users</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-user-card.html" class="sidebar-link"><i class="mdi mdi-account-box"></i> <span class="hide-menu"> User Card </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/pages-profile.html" class="sidebar-link"><i class="mdi mdi-account-network"></i><span class="hide-menu"> User Profile</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/ui-user-contacts.html" class="sidebar-link"><i class="mdi mdi-account-star-variant"></i><span class="hide-menu"> User Contact</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-ungroup"></i><span class="hide-menu">Invoice</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/pages-invoice.html" class="sidebar-link"><i class="mdi mdi-vector-triangle"></i><span class="hide-menu"> Invoice Layout </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/pages-invoice-list.html" class="sidebar-link"><i class="mdi mdi-vector-rectangle"></i><span class="hide-menu"> Invoice List</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-map"></i><span class="hide-menu">Maps</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/map-google.html" class="sidebar-link"><i class="mdi mdi-google-maps"></i><span class="hide-menu"> Google Map </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/map-vector.html" class="sidebar-link"><i class="mdi mdi-map-marker-radius"></i><span class="hide-menu"> Vector Map</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-face"></i><span class="hide-menu">Icons</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/icon-material.html" class="sidebar-link"><i class="mdi mdi-emoticon"></i> <span class="hide-menu"> Material Icons </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/icon-fontawesome.html" class="sidebar-link"><i class="mdi mdi-emoticon-cool"></i><span class="hide-menu"> Fontawesome Icons</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/icon-themify.html" class="sidebar-link"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu"> Themify Icons</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/icon-weather.html" class="sidebar-link"><i class="mdi mdi-weather-cloudy"></i><span class="hide-menu"> Weather Icons</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/icon-simple-lineicon.html" class="sidebar-link"><i class="mdi mdi mdi-image-broken-variant"></i> <span class="hide-menu"> Simple Line icons</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/icon-flag.html" class="sidebar-link"><i class="mdi mdi-flag-triangle"></i><span class="hide-menu"> Flag Icons</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-apple-safari"></i><span class="hide-menu">Timeline</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/timeline-center.html" class="sidebar-link"><i class="mdi mdi-clock-fast"></i> <span class="hide-menu"> Center Timeline </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/timeline-horizontal.html" class="sidebar-link"><i class="mdi mdi-clock-end"></i><span class="hide-menu"> Horizontal Timeline</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/timeline-left.html" class="sidebar-link"><i class="mdi mdi-clock-in"></i><span class="hide-menu"> Left Timeline</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/timeline-right.html" class="sidebar-link"><i class="mdi mdi-clock-start"></i><span class="hide-menu"> Right Timeline</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-email-open-outline"></i><span class="hide-menu">Email Template</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/email-templete-alert.html" class="sidebar-link"><i class="mdi mdi-message-alert"></i> <span class="hide-menu"> Alert </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/email-templete-basic.html" class="sidebar-link"><i class="mdi mdi-message-bulleted"></i><span class="hide-menu"> Basic</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/email-templete-billing.html" class="sidebar-link"><i class="mdi mdi-message-draw"></i><span class="hide-menu"> Billing</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/email-templete-password-reset.html" class="sidebar-link"><i class="mdi mdi-message-bulleted-off"></i><span class="hide-menu"> Password-Reset</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-alert-box"></i><span class="hide-menu">Error Pages</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/error-400.html" class="sidebar-link"><i class="mdi mdi-alert-outline"></i> <span class="hide-menu"> Error 400 </span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/error-403.html" class="sidebar-link"><i class="mdi mdi-alert-outline"></i><span class="hide-menu"> Error 403</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/error-404.html" class="sidebar-link"><i class="mdi mdi-alert-outline"></i><span class="hide-menu"> Error 404</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/error-500.html" class="sidebar-link"><i class="mdi mdi-alert-outline"></i><span class="hide-menu"> Error 500</span></a></li>
+                                <li class="sidebar-item"><a href="demos/admin-templates/xtreme-admin/html/mini-sidebar/error-503.html" class="sidebar-link"><i class="mdi mdi-alert-outline"></i><span class="hide-menu"> Error 503</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-notification-clear-all"></i><span class="hide-menu">Multi level dd</span></a>
+                            <ul aria-expanded="false" class="collapse first-level">
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> item 1.1</span></a></li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> item 1.2</span></a></li>
+                                <li class="sidebar-item"> <a class="has-arrow sidebar-link" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-playlist-plus"></i> <span class="hide-menu">Menu 1.3</span></a>
+                                    <ul aria-expanded="false" class="collapse second-level">
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> item 1.3.1</span></a></li>
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> item 1.3.2</span></a></li>
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> item 1.3.3</span></a></li>
+                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-octagram"></i><span class="hide-menu"> item 1.3.4</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i class="mdi mdi-playlist-check"></i><span class="hide-menu"> item 1.4</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i> <span class="hide-menu">Extra</span></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="demos/admin-templates/xtreme-admin/html/mini-sidebar/--/--/docs/documentation.html" aria-expanded="false"><i class="mdi mdi-content-paste"></i><span class="hide-menu">Documentation</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="demos/admin-templates/xtreme-admin/html/mini-sidebar/authentication-login1.html" aria-expanded="false"><i class="mdi mdi-directions"></i><span class="hide-menu">Log Out</span></a></li> -->
+            </ul>
+          </nav>
+          <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+      </aside>
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Page wrapper  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="col-5 align-self-center">
+              <h4 class="page-title">Dashboard</h4>
+              <div class="d-flex align-items-center">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Library
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+            <div class="col-7 align-self-center"></div>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+
+        <div class="card-body border-top m-b-0">
+          <div class="row m-b-0">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <label for="tags">Filter Skills: </label>
+                      <div class="input-group-append">
+                        <input
+                          id="tags"
+                          class="form-control"
+                          placeholder="Start Typing"
+                        />
+                        <button id="filterButton" class="btn btn-outline-secondary" type="button" value="" onclick="skillFilter()">
+                          Add
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div id="filterTags" class="row">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <!-- ============================================================== -->
+          <!-- Revenue - page-view-bounce rate -->
+          <!-- ============================================================== -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-md-flex align-items-center">
+                    <div>
+                      <h4 class="card-title">Force Graph</h4>
+                      <h5 class="card-subtitle">Network Graph</h5>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <svg id="graph" style="width:100%;height:100%"></svg>
+                    </div>
+                    <!-- column -->
+                  </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- Info Box -->
+                <!-- ============================================================== -->
+              </div>
+            </div>
+          </div>
+
+          <div id="selectedProfiles" class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-md-flex align-items-center">
+                    <div>
+                      <h4 class="card-title">Selected Profiles</h4>
+                      <h5 class="card-subtitle">Overview Details</h5>
+                    </div>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table no-wrap v-middle">
+                      <thead>
+                        <tr class="border-0">
+                          <th class="border-0">Name</th>
+                          <th class="border-0">Skill</th>
+                          <th class="border-0">Experience</th>
+                          <th class="border-0">Availability</th>
+                          <th class="border-0">Company</th>
+                          <th class="border-0">Income</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tbody1">
+                        <tr>
+                          <td>
+                            <div class="d-flex no-block align-items-center">
+                              <div class="m-r-10">
+                                <img
+                                  src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/images/users/d1.jpg"
+                                  alt="user"
+                                  class="rounded-circle"
+                                  width="45"
+                                />
+                              </div>
+                              <div class="">
+                                <h5 class="m-b-0 font-16 font-medium">
+                                  Hanna Gover
+                                </h5>
+                                <span>hgover@gmail.com</span>
+                              </div>
+                            </div>
+                          </td>
+                          <td>Project 1</td>
+                          <td>
+                            <div class="popover-icon">
+                              <a
+                                class="btn-circle btn btn-info"
+                                href="javascript:void(0)"
+                                >SS</a
+                              >
+                              <a
+                                class="btn-circle btn btn-cyan text-white popover-item"
+                                href="javascript:void(0)"
+                                >DS</a
+                              >
+                              <a
+                                class="btn-circle btn p-0 popover-item"
+                                href="javascript:void(0)"
+                                ><img
+                                  src="../../assets/images/users/1.jpg"
+                                  class="rounded-circle"
+                                  width="39"
+                                  alt=""
+                              /></a>
+                              <a
+                                class="btn-circle btn btn-outline-secondary"
+                                href="javascript:void(0)"
+                                >+</a
+                              >
+                            </div>
+                          </td>
+                          <td>
+                            <i
+                              class="fa fa-circle text-orange"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Amber"
+                            ></i>
+                          </td>
+                          <td>35</td>
+                          <td class="blue-grey-text  text-darken-4 font-medium">
+                            $96K
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center"></footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Page wrapper  -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- customizer Panel -->
+    <!-- ============================================================== -->
+
+    <div class="chat-windows"></div>
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../dist/js/app.min.js"></script>
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../dist/js/app.init.mini-sidebar.js"></script>
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../dist/js/app-style-switcher.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!--chartis chart-->
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <!--c3 charts -->
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/extra-libs/c3/d3.min.js"></script>
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/extra-libs/c3/c3.min.js"></script>
+    <!--chartjs -->
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/libs/chart.js/dist/Chart.min.js"></script>
+    <script src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../dist/js/pages/dashboards/dashboard1.js"></script>
+    <link
+      href="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/extra-libs/css-chart/css-chart.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      var nodes = [
+        { id: " r ", group: 1, label: " r ", level: 1 },
+        { id: "ai", group: 1, label: "ai", level: 31 },
+        { id: "analysis", group: 1, label: "analysis", level: 11 },
+        { id: "analyst", group: 1, label: "analyst", level: 1 },
+        { id: "analytic", group: 1, label: "analytic", level: 18 },
+        { id: "analytics", group: 1, label: "analytics", level: 26 },
+        { id: "auto", group: 1, label: "auto", level: 9 },
+        { id: "be", group: 1, label: "be", level: 1 },
+        { id: "bi", group: 1, label: "bi", level: 20 },
+        { id: "big_data", group: 1, label: "big_data", level: 5 },
+        { id: "ci", group: 1, label: "ci", level: 6 },
+        { id: "cs", group: 1, label: "cs", level: 38 },
+        { id: "customer", group: 1, label: "customer", level: 4 },
+        { id: "dashboard", group: 1, label: "dashboard", level: 3 },
+        { id: "data", group: 1, label: "data", level: 4 },
+        { id: "database", group: 1, label: "database", level: 13 },
+        { id: "develop", group: 1, label: "develop", level: 18 },
+        { id: "engineer", group: 1, label: "engineer", level: 5 },
+        { id: "excel", group: 1, label: "excel", level: 2 },
+        { id: "forecast", group: 1, label: "forecast", level: 1 },
+        { id: "html", group: 1, label: "html", level: 1 },
+        { id: "java", group: 1, label: "java", level: 2 },
+        { id: "learning", group: 1, label: "learning", level: 3 },
+        { id: "log", group: 1, label: "log", level: 26 },
+        { id: "logistic", group: 1, label: "logistic", level: 2 },
+        { id: "ml", group: 1, label: "ml", level: 15 },
+        { id: "model", group: 1, label: "model", level: 13 },
+        { id: "oracle", group: 1, label: "oracle", level: 2 },
+        { id: "pl", group: 1, label: "pl", level: 12 },
+        { id: "power", group: 1, label: "power", level: 5 },
+        { id: "predict", group: 1, label: "predict", level: 12 },
+        { id: "python", group: 1, label: "python", level: 3 },
+        { id: "regression", group: 1, label: "regression", level: 11 },
+        { id: "rest", group: 1, label: "rest", level: 5 },
+        { id: "science", group: 1, label: "science", level: 6 },
+        { id: "script", group: 1, label: "script", level: 1 },
+        { id: "search", group: 1, label: "search", level: 1 },
+        { id: "sentiment", group: 1, label: "sentiment", level: 5 },
+        { id: "sql", group: 1, label: "sql", level: 7 },
+        { id: "stat", group: 1, label: "stat", level: 11 },
+        { id: "statistic", group: 1, label: "statistic", level: 6 },
+        { id: "tableau", group: 1, label: "tableau", level: 1 },
+        { id: "testing", group: 1, label: "testing", level: 1 },
+        { id: "time", group: 1, label: "time", level: 9 },
+        { id: "ux", group: 1, label: "ux", level: 1 },
+        { id: "visualization", group: 1, label: "visualization", level: 8 },
+        { id: "web", group: 1, label: "web", level: 1 },
+        { id: "work", group: 1, label: "work", level: 5 }
+      ];
+
+      var selectedNodesFilter = [];
+
+      var links = [
+        { target: "ai", source: "statistic", strength: 0.09 },
+        { target: "ai", source: "visualization", strength: 0.09 },
+        { target: "ai", source: "log", strength: 0.09 },
+        { target: "ai", source: "develop", strength: 0.09 },
+        { target: "ai", source: "analytics", strength: 0.09 },
+        { target: "ai", source: "regression", strength: 0.09 },
+        { target: "ai", source: "cs", strength: 0.09 },
+        { target: "ai", source: "predict", strength: 0.09 },
+        { target: "ai", source: "bi", strength: 0.09 },
+        { target: "ai", source: "ml", strength: 0.09 },
+        { target: "ai", source: "work", strength: 0.09 },
+        { target: "ai", source: "sentiment", strength: 0.09 },
+        { target: "ai", source: "science", strength: 0.09 },
+        { target: "ai", source: "stat", strength: 0.09 },
+        { target: "ai", source: "database", strength: 0.09 },
+        { target: "ai", source: "pl", strength: 0.09 },
+        { target: "ai", source: "analytic", strength: 0.09 },
+        { target: "ai", source: "big_data", strength: 0.09 },
+        { target: "ai", source: "dashboard", strength: 0.09 },
+        { target: "ai", source: "analysis", strength: 0.09 },
+        { target: "ai", source: "time", strength: 0.09 },
+        { target: "ai", source: "model", strength: 0.09 },
+        { target: "ai", source: "sql", strength: 0.09 },
+        { target: "ai", source: "engineer", strength: 0.09 },
+        { target: "ai", source: "tableau", strength: 0.09 },
+        { target: "ai", source: "python", strength: 0.09 },
+        { target: "ai", source: "search", strength: 0.09 },
+        { target: "ai", source: "ci", strength: 0.09 },
+        { target: "ai", source: "java", strength: 0.09 },
+        { target: "ai", source: "logistic", strength: 0.09 },
+        { target: "ai", source: "data", strength: 0.09 },
+        { target: "ai", source: " r ", strength: 0.09 },
+        { target: "statistic", source: "analytics", strength: 0.09 },
+        { target: "statistic", source: "cs", strength: 0.09 },
+        { target: "statistic", source: "stat", strength: 0.09 },
+        { target: "statistic", source: "analytic", strength: 0.09 },
+        { target: "statistic", source: "model", strength: 0.09 },
+        { target: "statistic", source: "data", strength: 0.09 },
+        { target: "auto", source: "cs", strength: 0.09 },
+        { target: "auto", source: "bi", strength: 0.09 },
+        { target: "auto", source: "stat", strength: 0.09 },
+        { target: "auto", source: "analytic", strength: 0.09 },
+        { target: "auto", source: "analysis", strength: 0.09 },
+        { target: "auto", source: "time", strength: 0.09 },
+        { target: "auto", source: "model", strength: 0.09 },
+        { target: "auto", source: "sql", strength: 0.09 },
+        { target: "auto", source: "data", strength: 0.09 },
+        { target: "visualization", source: "cs", strength: 0.09 },
+        { target: "visualization", source: "bi", strength: 0.09 },
+        { target: "visualization", source: "ml", strength: 0.09 },
+        { target: "visualization", source: "database", strength: 0.09 },
+        { target: "visualization", source: "analytic", strength: 0.09 },
+        { target: "visualization", source: "model", strength: 0.09 },
+        { target: "visualization", source: "ci", strength: 0.09 },
+        { target: "visualization", source: "data", strength: 0.09 },
+        { target: "log", source: "develop", strength: 0.09 },
+        { target: "log", source: "analytics", strength: 0.09 },
+        { target: "log", source: "regression", strength: 0.09 },
+        { target: "log", source: "cs", strength: 0.09 },
+        { target: "log", source: "predict", strength: 0.09 },
+        { target: "log", source: "bi", strength: 0.09 },
+        { target: "log", source: "ml", strength: 0.09 },
+        { target: "log", source: "customer", strength: 0.09 },
+        { target: "log", source: "stat", strength: 0.09 },
+        { target: "log", source: "database", strength: 0.09 },
+        { target: "log", source: "pl", strength: 0.09 },
+        { target: "log", source: "analytic", strength: 0.09 },
+        { target: "log", source: "ux", strength: 0.09 },
+        { target: "log", source: "analysis", strength: 0.09 },
+        { target: "log", source: "time", strength: 0.09 },
+        { target: "log", source: "model", strength: 0.09 },
+        { target: "log", source: "sql", strength: 0.09 },
+        { target: "log", source: "engineer", strength: 0.09 },
+        { target: "log", source: "tableau", strength: 0.09 },
+        { target: "log", source: "python", strength: 0.09 },
+        { target: "log", source: "ci", strength: 0.09 },
+        { target: "log", source: "java", strength: 0.09 },
+        { target: "log", source: "logistic", strength: 0.09 },
+        { target: "log", source: "data", strength: 0.09 },
+        { target: "log", source: "script", strength: 0.09 },
+        { target: "log", source: " r ", strength: 0.09 },
+        { target: "develop", source: "analytics", strength: 0.09 },
+        { target: "develop", source: "cs", strength: 0.09 },
+        { target: "develop", source: "bi", strength: 0.09 },
+        { target: "develop", source: "ml", strength: 0.09 },
+        { target: "develop", source: "science", strength: 0.09 },
+        { target: "develop", source: "database", strength: 0.09 },
+        { target: "develop", source: "pl", strength: 0.09 },
+        { target: "develop", source: "analytic", strength: 0.09 },
+        { target: "develop", source: "big_data", strength: 0.09 },
+        { target: "develop", source: "analysis", strength: 0.09 },
+        { target: "develop", source: "time", strength: 0.09 },
+        { target: "develop", source: "model", strength: 0.09 },
+        { target: "develop", source: "sql", strength: 0.09 },
+        { target: "develop", source: "engineer", strength: 0.09 },
+        { target: "develop", source: "python", strength: 0.09 },
+        { target: "develop", source: "ci", strength: 0.09 },
+        { target: "develop", source: "java", strength: 0.09 },
+        { target: "develop", source: "data", strength: 0.09 },
+        { target: "analytics", source: "regression", strength: 0.09 },
+        { target: "analytics", source: "cs", strength: 0.09 },
+        { target: "analytics", source: "predict", strength: 0.09 },
+        { target: "analytics", source: "bi", strength: 0.09 },
+        { target: "analytics", source: "ml", strength: 0.09 },
+        { target: "analytics", source: "customer", strength: 0.09 },
+        { target: "analytics", source: "science", strength: 0.09 },
+        { target: "analytics", source: "stat", strength: 0.09 },
+        { target: "analytics", source: "database", strength: 0.09 },
+        { target: "analytics", source: "pl", strength: 0.09 },
+        { target: "analytics", source: "power", strength: 0.09 },
+        { target: "analytics", source: "analytic", strength: 0.09 },
+        { target: "analytics", source: "analysis", strength: 0.09 },
+        { target: "analytics", source: "excel", strength: 0.09 },
+        { target: "analytics", source: "time", strength: 0.09 },
+        { target: "analytics", source: "model", strength: 0.09 },
+        { target: "analytics", source: "sql", strength: 0.09 },
+        { target: "analytics", source: "engineer", strength: 0.09 },
+        { target: "analytics", source: "tableau", strength: 0.09 },
+        { target: "analytics", source: "python", strength: 0.09 },
+        { target: "analytics", source: "ci", strength: 0.09 },
+        { target: "analytics", source: "java", strength: 0.09 },
+        { target: "analytics", source: "logistic", strength: 0.09 },
+        { target: "analytics", source: "data", strength: 0.09 },
+        { target: "analytics", source: "script", strength: 0.09 },
+        { target: "analytics", source: " r ", strength: 0.09 },
+        { target: "rest", source: "cs", strength: 0.09 },
+        { target: "rest", source: "analytic", strength: 0.09 },
+        { target: "rest", source: "model", strength: 0.09 },
+        { target: "rest", source: "ci", strength: 0.09 },
+        { target: "rest", source: "data", strength: 0.09 },
+        { target: "regression", source: "cs", strength: 0.09 },
+        { target: "regression", source: "predict", strength: 0.09 },
+        { target: "regression", source: "stat", strength: 0.09 },
+        { target: "regression", source: "pl", strength: 0.09 },
+        { target: "regression", source: "analytic", strength: 0.09 },
+        { target: "regression", source: "analysis", strength: 0.09 },
+        { target: "regression", source: "model", strength: 0.09 },
+        { target: "regression", source: "ci", strength: 0.09 },
+        { target: "regression", source: "logistic", strength: 0.09 },
+        { target: "regression", source: "data", strength: 0.09 },
+        { target: "regression", source: " r ", strength: 0.09 },
+        { target: "cs", source: "predict", strength: 0.09 },
+        { target: "cs", source: "bi", strength: 0.09 },
+        { target: "cs", source: "learning", strength: 0.09 },
+        { target: "cs", source: "oracle", strength: 0.09 },
+        { target: "cs", source: "ml", strength: 0.09 },
+        { target: "cs", source: "customer", strength: 0.09 },
+        { target: "cs", source: "work", strength: 0.09 },
+        { target: "cs", source: "sentiment", strength: 0.09 },
+        { target: "cs", source: "science", strength: 0.09 },
+        { target: "cs", source: "stat", strength: 0.09 },
+        { target: "cs", source: "database", strength: 0.09 },
+        { target: "cs", source: "testing", strength: 0.09 },
+        { target: "cs", source: "pl", strength: 0.09 },
+        { target: "cs", source: "power", strength: 0.09 },
+        { target: "cs", source: "analytic", strength: 0.09 },
+        { target: "cs", source: "big_data", strength: 0.09 },
+        { target: "cs", source: "dashboard", strength: 0.09 },
+        { target: "cs", source: "ux", strength: 0.09 },
+        { target: "cs", source: "analysis", strength: 0.09 },
+        { target: "cs", source: "web", strength: 0.09 },
+        { target: "cs", source: "excel", strength: 0.09 },
+        { target: "cs", source: "time", strength: 0.09 },
+        { target: "cs", source: "model", strength: 0.09 },
+        { target: "cs", source: "sql", strength: 0.09 },
+        { target: "cs", source: "engineer", strength: 0.09 },
+        { target: "cs", source: "html", strength: 0.09 },
+        { target: "cs", source: "tableau", strength: 0.09 },
+        { target: "cs", source: "python", strength: 0.09 },
+        { target: "cs", source: "search", strength: 0.09 },
+        { target: "cs", source: "ci", strength: 0.09 },
+        { target: "cs", source: "java", strength: 0.09 },
+        { target: "cs", source: "forecast", strength: 0.09 },
+        { target: "cs", source: "logistic", strength: 0.09 },
+        { target: "cs", source: "data", strength: 0.09 },
+        { target: "cs", source: "analyst", strength: 0.09 },
+        { target: "cs", source: "be", strength: 0.09 },
+        { target: "cs", source: "script", strength: 0.09 },
+        { target: "cs", source: " r ", strength: 0.09 },
+        { target: "predict", source: "bi", strength: 0.09 },
+        { target: "predict", source: "science", strength: 0.09 },
+        { target: "predict", source: "stat", strength: 0.09 },
+        { target: "predict", source: "pl", strength: 0.09 },
+        { target: "predict", source: "analytic", strength: 0.09 },
+        { target: "predict", source: "analysis", strength: 0.09 },
+        { target: "predict", source: "time", strength: 0.09 },
+        { target: "predict", source: "model", strength: 0.09 },
+        { target: "predict", source: "python", strength: 0.09 },
+        { target: "predict", source: "ci", strength: 0.09 },
+        { target: "predict", source: "data", strength: 0.09 },
+        { target: "predict", source: " r ", strength: 0.09 },
+        { target: "bi", source: "ml", strength: 0.09 },
+        { target: "bi", source: "work", strength: 0.09 },
+        { target: "bi", source: "science", strength: 0.09 },
+        { target: "bi", source: "stat", strength: 0.09 },
+        { target: "bi", source: "database", strength: 0.09 },
+        { target: "bi", source: "pl", strength: 0.09 },
+        { target: "bi", source: "analytic", strength: 0.09 },
+        { target: "bi", source: "big_data", strength: 0.09 },
+        { target: "bi", source: "analysis", strength: 0.09 },
+        { target: "bi", source: "web", strength: 0.09 },
+        { target: "bi", source: "time", strength: 0.09 },
+        { target: "bi", source: "model", strength: 0.09 },
+        { target: "bi", source: "sql", strength: 0.09 },
+        { target: "bi", source: "engineer", strength: 0.09 },
+        { target: "bi", source: "python", strength: 0.09 },
+        { target: "bi", source: "search", strength: 0.09 },
+        { target: "bi", source: "ci", strength: 0.09 },
+        { target: "bi", source: "java", strength: 0.09 },
+        { target: "bi", source: "data", strength: 0.09 },
+        { target: "bi", source: " r ", strength: 0.09 },
+        { target: "learning", source: "analytic", strength: 0.09 },
+        { target: "learning", source: "model", strength: 0.09 },
+        { target: "learning", source: "data", strength: 0.09 },
+        { target: "oracle", source: "sql", strength: 0.09 },
+        { target: "oracle", source: "data", strength: 0.09 },
+        { target: "ml", source: "stat", strength: 0.09 },
+        { target: "ml", source: "database", strength: 0.09 },
+        { target: "ml", source: "pl", strength: 0.09 },
+        { target: "ml", source: "analytic", strength: 0.09 },
+        { target: "ml", source: "analysis", strength: 0.09 },
+        { target: "ml", source: "model", strength: 0.09 },
+        { target: "ml", source: "sql", strength: 0.09 },
+        { target: "ml", source: "engineer", strength: 0.09 },
+        { target: "ml", source: "html", strength: 0.09 },
+        { target: "ml", source: "python", strength: 0.09 },
+        { target: "ml", source: "ci", strength: 0.09 },
+        { target: "ml", source: "java", strength: 0.09 },
+        { target: "ml", source: "data", strength: 0.09 },
+        { target: "ml", source: "script", strength: 0.09 },
+        { target: "ml", source: " r ", strength: 0.09 },
+        { target: "customer", source: "analytic", strength: 0.09 },
+        { target: "customer", source: "model", strength: 0.09 },
+        { target: "customer", source: "sql", strength: 0.09 },
+        { target: "customer", source: "data", strength: 0.09 },
+        { target: "work", source: "pl", strength: 0.09 },
+        { target: "work", source: "analytic", strength: 0.09 },
+        { target: "work", source: "model", strength: 0.09 },
+        { target: "work", source: "ci", strength: 0.09 },
+        { target: "work", source: "data", strength: 0.09 },
+        { target: "sentiment", source: "analytic", strength: 0.09 },
+        { target: "sentiment", source: "analysis", strength: 0.09 },
+        { target: "sentiment", source: "time", strength: 0.09 },
+        { target: "sentiment", source: "model", strength: 0.09 },
+        { target: "sentiment", source: "data", strength: 0.09 },
+        { target: "science", source: "database", strength: 0.09 },
+        { target: "science", source: "pl", strength: 0.09 },
+        { target: "science", source: "analytic", strength: 0.09 },
+        { target: "science", source: "model", strength: 0.09 },
+        { target: "science", source: "ci", strength: 0.09 },
+        { target: "science", source: "data", strength: 0.09 },
+        { target: "stat", source: "pl", strength: 0.09 },
+        { target: "stat", source: "analytic", strength: 0.09 },
+        { target: "stat", source: "analysis", strength: 0.09 },
+        { target: "stat", source: "time", strength: 0.09 },
+        { target: "stat", source: "model", strength: 0.09 },
+        { target: "stat", source: "sql", strength: 0.09 },
+        { target: "stat", source: "engineer", strength: 0.09 },
+        { target: "stat", source: "python", strength: 0.09 },
+        { target: "stat", source: "ci", strength: 0.09 },
+        { target: "stat", source: "data", strength: 0.09 },
+        { target: "stat", source: " r ", strength: 0.09 },
+        { target: "database", source: "pl", strength: 0.09 },
+        { target: "database", source: "analytic", strength: 0.09 },
+        { target: "database", source: "big_data", strength: 0.09 },
+        { target: "database", source: "analysis", strength: 0.09 },
+        { target: "database", source: "web", strength: 0.09 },
+        { target: "database", source: "time", strength: 0.09 },
+        { target: "database", source: "model", strength: 0.09 },
+        { target: "database", source: "sql", strength: 0.09 },
+        { target: "database", source: "engineer", strength: 0.09 },
+        { target: "database", source: "python", strength: 0.09 },
+        { target: "database", source: "ci", strength: 0.09 },
+        { target: "database", source: "java", strength: 0.09 },
+        { target: "database", source: "data", strength: 0.09 },
+        { target: "testing", source: "data", strength: 0.09 },
+        { target: "pl", source: "analytic", strength: 0.09 },
+        { target: "pl", source: "analysis", strength: 0.09 },
+        { target: "pl", source: "time", strength: 0.09 },
+        { target: "pl", source: "model", strength: 0.09 },
+        { target: "pl", source: "sql", strength: 0.09 },
+        { target: "pl", source: "engineer", strength: 0.09 },
+        { target: "pl", source: "python", strength: 0.09 },
+        { target: "pl", source: "ci", strength: 0.09 },
+        { target: "pl", source: "java", strength: 0.09 },
+        { target: "pl", source: "data", strength: 0.09 },
+        { target: "pl", source: "be", strength: 0.09 },
+        { target: "pl", source: " r ", strength: 0.09 },
+        { target: "power", source: "analytic", strength: 0.09 },
+        { target: "power", source: "analysis", strength: 0.09 },
+        { target: "power", source: "time", strength: 0.09 },
+        { target: "power", source: "model", strength: 0.09 },
+        { target: "power", source: "data", strength: 0.09 },
+        { target: "analytic", source: "big_data", strength: 0.09 },
+        { target: "analytic", source: "analysis", strength: 0.09 },
+        { target: "analytic", source: "excel", strength: 0.09 },
+        { target: "analytic", source: "time", strength: 0.09 },
+        { target: "analytic", source: "model", strength: 0.09 },
+        { target: "analytic", source: "sql", strength: 0.09 },
+        { target: "analytic", source: "engineer", strength: 0.09 },
+        { target: "analytic", source: "tableau", strength: 0.09 },
+        { target: "analytic", source: "python", strength: 0.09 },
+        { target: "analytic", source: "search", strength: 0.09 },
+        { target: "analytic", source: "ci", strength: 0.09 },
+        { target: "analytic", source: "java", strength: 0.09 },
+        { target: "analytic", source: "logistic", strength: 0.09 },
+        { target: "analytic", source: "data", strength: 0.09 },
+        { target: "analytic", source: "analyst", strength: 0.09 },
+        { target: "analytic", source: "be", strength: 0.09 },
+        { target: "analytic", source: "script", strength: 0.09 },
+        { target: "analytic", source: " r ", strength: 0.09 },
+        { target: "big_data", source: "analysis", strength: 0.09 },
+        { target: "big_data", source: "time", strength: 0.09 },
+        { target: "big_data", source: "model", strength: 0.09 },
+        { target: "big_data", source: "sql", strength: 0.09 },
+        { target: "big_data", source: "data", strength: 0.09 },
+        { target: "dashboard", source: "analysis", strength: 0.09 },
+        { target: "dashboard", source: "time", strength: 0.09 },
+        { target: "dashboard", source: "data", strength: 0.09 },
+        { target: "ux", source: "data", strength: 0.09 },
+        { target: "analysis", source: "time", strength: 0.09 },
+        { target: "analysis", source: "model", strength: 0.09 },
+        { target: "analysis", source: "sql", strength: 0.09 },
+        { target: "analysis", source: "engineer", strength: 0.09 },
+        { target: "analysis", source: "python", strength: 0.09 },
+        { target: "analysis", source: "search", strength: 0.09 },
+        { target: "analysis", source: "ci", strength: 0.09 },
+        { target: "analysis", source: "java", strength: 0.09 },
+        { target: "analysis", source: "data", strength: 0.09 },
+        { target: "analysis", source: "be", strength: 0.09 },
+        { target: "analysis", source: " r ", strength: 0.09 },
+        { target: "web", source: "data", strength: 0.09 },
+        { target: "excel", source: "model", strength: 0.09 },
+        { target: "excel", source: "data", strength: 0.09 },
+        { target: "time", source: "model", strength: 0.09 },
+        { target: "time", source: "sql", strength: 0.09 },
+        { target: "time", source: "engineer", strength: 0.09 },
+        { target: "time", source: "python", strength: 0.09 },
+        { target: "time", source: "search", strength: 0.09 },
+        { target: "time", source: "ci", strength: 0.09 },
+        { target: "time", source: "java", strength: 0.09 },
+        { target: "time", source: "data", strength: 0.09 },
+        { target: "time", source: " r ", strength: 0.09 },
+        { target: "model", source: "sql", strength: 0.09 },
+        { target: "model", source: "engineer", strength: 0.09 },
+        { target: "model", source: "tableau", strength: 0.09 },
+        { target: "model", source: "python", strength: 0.09 },
+        { target: "model", source: "search", strength: 0.09 },
+        { target: "model", source: "ci", strength: 0.09 },
+        { target: "model", source: "java", strength: 0.09 },
+        { target: "model", source: "logistic", strength: 0.09 },
+        { target: "model", source: "data", strength: 0.09 },
+        { target: "model", source: "analyst", strength: 0.09 },
+        { target: "model", source: "be", strength: 0.09 },
+        { target: "model", source: "script", strength: 0.09 },
+        { target: "model", source: " r ", strength: 0.09 },
+        { target: "sql", source: "engineer", strength: 0.09 },
+        { target: "sql", source: "search", strength: 0.09 },
+        { target: "sql", source: "ci", strength: 0.09 },
+        { target: "sql", source: "java", strength: 0.09 },
+        { target: "sql", source: "data", strength: 0.09 },
+        { target: "sql", source: "analyst", strength: 0.09 },
+        { target: "sql", source: " r ", strength: 0.09 },
+        { target: "engineer", source: "python", strength: 0.09 },
+        { target: "engineer", source: "ci", strength: 0.09 },
+        { target: "engineer", source: "java", strength: 0.09 },
+        { target: "engineer", source: "data", strength: 0.09 },
+        { target: "engineer", source: "script", strength: 0.09 },
+        { target: "html", source: "data", strength: 0.09 },
+        { target: "tableau", source: "data", strength: 0.09 },
+        { target: "python", source: "ci", strength: 0.09 },
+        { target: "python", source: "java", strength: 0.09 },
+        { target: "python", source: "data", strength: 0.09 },
+        { target: "search", source: "data", strength: 0.09 },
+        { target: "ci", source: "java", strength: 0.09 },
+        { target: "ci", source: "logistic", strength: 0.09 },
+        { target: "ci", source: "data", strength: 0.09 },
+        { target: "ci", source: "analyst", strength: 0.09 },
+        { target: "ci", source: "be", strength: 0.09 },
+        { target: "ci", source: " r ", strength: 0.09 },
+        { target: "java", source: "data", strength: 0.09 },
+        { target: "java", source: "script", strength: 0.09 },
+        { target: "forecast", source: "data", strength: 0.09 },
+        { target: "logistic", source: "data", strength: 0.09 },
+        { target: "logistic", source: " r ", strength: 0.09 },
+        { target: "data", source: "analyst", strength: 0.09 },
+        { target: "data", source: "be", strength: 0.09 },
+        { target: "data", source: "script", strength: 0.09 },
+        { target: "data", source: " r ", strength: 0.09 }
+      ];
+
+      var resumes = [
+        {
+          Name: "Aditi Saha",
+          Email: "aditi0921@gmail.com",
+          Experience: "",
+          Location: "",
+          Last_Emp: "",
+          Education: "",
+          Token: [
+            "business_analyst",
+            "data_analytics",
+            "analytics",
+            "machine_learning",
+            "statistical_methods",
+            "excel",
+            "r",
+            "spss",
+            "sql",
+            "propensity",
+            "model",
+            "logistic_regression",
+            "algorithm",
+            "decision_tree",
+            "random_forest",
+            "campaigns",
+            "product",
+            "trend",
+            "segment",
+            "offer",
+            "up-sell",
+            "cross-sell",
+            "market_basket_analysis",
+            "dashboard",
+            "tableau",
+            "power_point",
+            "presentation",
+            "sentiment",
+            "insight",
+            "profiling",
+            "forecast",
+            "tslm",
+            "time_series",
+            "linear",
+            "data_analyst",
+            "linear_regression",
+            "stepwise",
+            "regression",
+            "score",
+            "statistical",
+            "statistic",
+            "sas",
+            "stat",
+            "enterprise",
+            "business_intelligence",
+            "analyst"
+          ]
+        },
+        {
+          Name: "Ahlam Wahdan",
+          Email: "AhlamWahdan87@gmail.com",
+          Experience: "3",
+          Location: "UAE",
+          Last_Emp: "ACCBC",
+          Education: "Master of IT Management (MITM)",
+          Token: [
+            "data_scientist",
+            "masters",
+            "computer",
+            "engineering",
+            "predictive",
+            "machine_learning",
+            "svm",
+            "linear_regression",
+            "knn",
+            "decision_tree",
+            "r",
+            "neural",
+            "network",
+            "deep_learning",
+            "ai",
+            "cleansing",
+            "data_analysis",
+            "data_quality",
+            "statistical",
+            "analysis",
+            "exploratory",
+            "descriptive",
+            "model",
+            "validation",
+            "pca",
+            "overestimation",
+            "estimation",
+            "visualization",
+            "data_management",
+            "resourcing",
+            "microsoft",
+            "governance",
+            "audit",
+            "standards",
+            "kpis",
+            "master_data",
+            "data_analyst",
+            "scientist",
+            "logistic",
+            "migrating",
+            "report",
+            "trend",
+            "predict",
+            "marketing",
+            "offer",
+            "strategic",
+            "consultant",
+            "health",
+            "insurance",
+            "analytics",
+            "member",
+            "profiling",
+            "cost",
+            "prediction",
+            "data_engineer",
+            "multiple",
+            "predictive_model",
+            "accuracy",
+            "score",
+            "academic",
+            "demographic",
+            "indicators",
+            "statistic",
+            "trained",
+            "tested",
+            "mathematics",
+            "centralization",
+            "reporting",
+            "programming",
+            "c",
+            "sql",
+            "bi",
+            "vb",
+            "net",
+            "css",
+            "html",
+            "ado",
+            "personation"
+          ]
+        },
+        {
+          Name: "Akash Verma",
+          Email: "akki.verma22@gmail.com",
+          Experience: "8",
+          Location: "Noida",
+          Last_Emp: "Global Logic",
+          Education: "MCA ",
+          Token: [
+            "mca",
+            "software_engineer",
+            "development",
+            "software",
+            "product",
+            "analysis",
+            "coding",
+            "testing",
+            "de_bugging",
+            "documentation",
+            "maintenance",
+            "analyze",
+            "minimize",
+            "cycle",
+            "time",
+            "java",
+            "hadoop",
+            "hive",
+            "mapreduce",
+            "pig",
+            "sqoop",
+            "flume",
+            "hbase",
+            "elastic",
+            "search",
+            "mongodb",
+            "real_time",
+            "technology",
+            "streaming",
+            "spark",
+            "storm",
+            "interpersonal",
+            "skill",
+            "problem_solving",
+            "dashboard",
+            "poc",
+            "centos",
+            "apache_spark",
+            "scala",
+            "web",
+            "html",
+            "d3js",
+            "js",
+            "gridster",
+            "server",
+            "node",
+            "apache",
+            "kafka",
+            "logstash",
+            "nosql",
+            "db",
+            "redis",
+            "visualize",
+            "performance",
+            "sbc",
+            "cdrs",
+            "stream",
+            "develop",
+            "hdfs",
+            "cluster",
+            "visualization",
+            "reporting",
+            "map_reduce",
+            "highcharts",
+            "javascript",
+            "hcatalog",
+            "bi",
+            "pentaho",
+            "kibana",
+            "rdbms",
+            "pig_script",
+            "udfs",
+            "ubuntu",
+            "cdh",
+            "database",
+            "sql_server",
+            "oracle",
+            "hive",
+            "pig",
+            "eclipse",
+            "xml",
+            "forecasting",
+            "shell_scripting",
+            "sql",
+            "oozie",
+            "css",
+            "jira",
+            "shell",
+            "pig",
+            "big_data",
+            "mysql",
+            "hive",
+            "relational",
+            "windows",
+            "unix",
+            "perl",
+            "informatica",
+            "autosys",
+            "putty",
+            "stored_procedures",
+            "elasticsearch",
+            "cloudera",
+            "tableau",
+            "broker",
+            "linux",
+            "window_xp",
+            "tomcat",
+            "node_js",
+            "developer",
+            "extramural",
+            "ethical_hacking",
+            "english",
+            "hindi"
+          ]
+        },
+        {
+          Name: "Ali Nadaf",
+          Email: "ali.nadaf@gmail.com ",
+          Experience: "10",
+          Location: "UAE",
+          Last_Emp: "Alef Education",
+          Education: "PhD",
+          Token: [
+            "data_scientist",
+            "postdoc",
+            "machine_learning",
+            "phd",
+            "mathematics",
+            "research",
+            "mathematical",
+            "modeling",
+            "statistical",
+            "engineer",
+            "computer",
+            "programming",
+            "computational",
+            "social_sciences",
+            "modelling",
+            "analytical",
+            "problem_solving",
+            "recommendations",
+            "analyze",
+            "python",
+            "r",
+            "matlab",
+            "simulink",
+            "maple",
+            "vba",
+            "sql",
+            "html",
+            "data_science",
+            "architect",
+            "software",
+            "developer",
+            "business_intelligence",
+            "train",
+            "engineers",
+            "ml",
+            "web",
+            "traffic",
+            "predict",
+            "anomaly",
+            "detection",
+            "sentiment_analysis",
+            "word_embedding",
+            "deep_learning",
+            "rnn",
+            "rbm",
+            "embedded",
+            "collaborative_filtering",
+            "itemvec",
+            "denoising",
+            "auto",
+            "encoder",
+            "recommender",
+            "rest",
+            "api",
+            "ab_testing",
+            "data_analyst",
+            "big_data",
+            "spatial",
+            "model",
+            "simulate",
+            "visualization",
+            "nepidemix",
+            "validation",
+            "testing",
+            "develop",
+            "databases",
+            "infographics",
+            "network",
+            "telecommunication",
+            "master",
+            "degree",
+            "engineering",
+            "bachelor"
+          ]
+        },
+        {
+          Name: "Anurag Dubey",
+          Email: "er.anurag2k10@gmail.com ",
+          Experience: "7",
+          Location: "",
+          Last_Emp: "Optum global Solutions ",
+          Education: "Btech",
+          Token: [
+            "machine_learning",
+            "automation",
+            "nlp",
+            "statistical",
+            "algorithm",
+            "customer",
+            "profile",
+            "conjoint",
+            "analysis",
+            "purchase",
+            "probability",
+            "regression",
+            "logistic_regression",
+            "ordinal",
+            "k_mean_clustering",
+            "decision_tree",
+            "svm",
+            "search",
+            "optimization",
+            "digital",
+            "regression_model",
+            "clickthroughrate",
+            "conversionrate",
+            "numberofclicks",
+            "dashboard",
+            "recommendation",
+            "linear_regression",
+            "poisson",
+            "binomial",
+            "fraud",
+            "detection",
+            "profiling",
+            "model",
+            "insurance",
+            "claim",
+            "fraudulent",
+            "financial",
+            "loss",
+            "sla",
+            "imbalance",
+            "class",
+            "overfitting",
+            "classification",
+            "xgboost",
+            "random_forest",
+            "neural",
+            "networks",
+            "cfe",
+            "segment",
+            "clustering",
+            "naive",
+            "bayes",
+            "topic",
+            "modelling",
+            "lda",
+            "bi",
+            "tableau",
+            "datamere",
+            "collaborative",
+            "filtering",
+            "text",
+            "analytics",
+            "statistics",
+            "preprocessing",
+            "probabilistic",
+            "chabot",
+            "problem_solving",
+            "matrix_factorization",
+            "regularization",
+            "forecast",
+            "demand",
+            "arima",
+            "prediction",
+            "real_time",
+            "predict",
+            "demographics",
+            "models",
+            "decision_trees",
+            "support_vector_machine",
+            "knn",
+            "kernels",
+            "predictive",
+            "python",
+            "pricing",
+            "business_analytics",
+            "deep_learning",
+            "dimensionality_reduction",
+            "b_tech",
+            "r",
+            "scikit_learn",
+            "numpy",
+            "pandas",
+            "matplotlib",
+            "seaborn",
+            "textblob",
+            "nltk",
+            "spark",
+            "java",
+            "selenium",
+            "social_medium",
+            "simulation",
+            "basic",
+            "ms",
+            "word",
+            "excel",
+            "vba",
+            "macros",
+            "pivot_table",
+            "power_Point"
+          ]
+        },
+        {
+          Name: "Arijit Lahiri",
+          Email: "",
+          Experience: "12",
+          Location: "",
+          Last_Emp: "",
+          Education: "Masters",
+          Token: [
+            "decision_tree",
+            "online",
+            "instore",
+            "purchase",
+            "transactions",
+            "demand",
+            "forecasting",
+            "google_cloud_platform",
+            "fb_prophet",
+            "model",
+            "additive",
+            "regression_model",
+            "trend",
+            "seasonality",
+            "holidays",
+            "hierarchical",
+            "forecast",
+            "estimates",
+            "merchandise",
+            "assortment",
+            "campaign",
+            "ab_testing",
+            "incrementality",
+            "campaigns",
+            "effectiveness",
+            "click_rate",
+            "redemption",
+            "multiplier",
+            "google",
+            "cloud",
+            "dataprep",
+            "amazon",
+            "server",
+            "prediction",
+            "senior",
+            "data_scientist",
+            "advanced_analytics",
+            "data_science",
+            "analytics",
+            "consulting",
+            "retail",
+            "master",
+            "statistic",
+            "r",
+            "ai",
+            "ml",
+            "tool",
+            "sas",
+            "python",
+            "trifacta",
+            "dataiku",
+            "random_forest",
+            "neural",
+            "networks",
+            "svm",
+            "logistic_regression",
+            "database",
+            "teradata",
+            "visualization",
+            "microstrategy",
+            "tableau",
+            "bigquery",
+            "loyalty",
+            "marketing",
+            "targeting",
+            "predictive_model",
+            "propensity",
+            "predict",
+            "development",
+            "score"
+          ]
+        },
+        {
+          Name: "Avaneesh Sharma",
+          Email: "",
+          Experience: "4",
+          Location: "",
+          Last_Emp: "",
+          Education: "Post Graduate",
+          Token: [
+            "adaptive",
+            "pricing",
+            "price",
+            "elasticity",
+            "competitor",
+            "market",
+            "share",
+            "clustering",
+            "k_means",
+            "segment",
+            "segmentation",
+            "cannibalization",
+            "promotion",
+            "planning",
+            "linear_regression",
+            "ui",
+            "ux",
+            "node",
+            "js",
+            "python",
+            "html",
+            "javascript",
+            "unix",
+            "poc",
+            "analytics",
+            "retail",
+            "business_analytics",
+            "data_visualization",
+            "post",
+            "graduate",
+            "engineer",
+            "data_science",
+            "r",
+            "ai",
+            "ml",
+            "sas",
+            "logistic_regression",
+            "gradient",
+            "boosting",
+            "wrangling",
+            "pre_processing",
+            "database",
+            "teradata",
+            "visualization",
+            "tableau",
+            "excel",
+            "d3js",
+            "frontend",
+            "cs",
+            "associate",
+            "data_scientist",
+            "models",
+            "predict",
+            "seasonality",
+            "lifecycle"
+          ]
+        },
+        {
+          Name: "GOWRI GURUPRASAD",
+          Email: "gp_gowri@yahoo.co.in",
+          Experience: "6",
+          Location: "Bengaluru, India",
+          Last_Emp: "AIG",
+          Education: "MBA",
+          Token: [
+            "senior",
+            "analyst",
+            "r",
+            "sql",
+            "data_science",
+            "predictive_modeling",
+            "analytics",
+            "windows",
+            "excel",
+            "access",
+            "powerpoint",
+            "word",
+            "regression",
+            "logistic_regression",
+            "clustering",
+            "decision",
+            "tree",
+            "hypothesis",
+            "testing",
+            "t_test",
+            "z",
+            "chi_square",
+            "anova",
+            "conjoint",
+            "market_basket_analysis",
+            "sentiment_analysis",
+            "risk",
+            "modeling",
+            "predict",
+            "financial",
+            "loss",
+            "data_cleaning",
+            "data_preparation",
+            "predictive",
+            "model",
+            "random_forest",
+            "decision_tree",
+            "chaid",
+            "cart",
+            "analysis",
+            "segmentation",
+            "variance",
+            "insurance",
+            "predictions",
+            "text_mining",
+            "sentiment",
+            "twitter",
+            "wordcloud",
+            "score",
+            "plot",
+            "developer",
+            "app",
+            "health",
+            "consulting",
+            "portfolio",
+            "optimization",
+            "analyze",
+            "customer",
+            "learning",
+            "pattern",
+            "recommendation",
+            "primary",
+            "secondary",
+            "research",
+            "collation",
+            "predicting",
+            "analyzing",
+            "behavior",
+            "mba",
+            "bcom",
+            "programming",
+            "domain"
+          ]
+        },
+        {
+          Name: "Illakya R",
+          Email: "Illakyaramesh@gmail.com",
+          Experience: "4",
+          Location: "",
+          Last_Emp: "Daimler India",
+          Education: "MBA",
+          Token: [
+            "data_analytics",
+            "iim",
+            "mba",
+            "financial",
+            "engineering",
+            "be",
+            "electronics",
+            "communication",
+            "big_data",
+            "hadoop",
+            "hive",
+            "spark",
+            "sqoop",
+            "flume",
+            "oozie",
+            "hbase",
+            "stastiscal",
+            "tool",
+            "r",
+            "python",
+            "scala",
+            "reporting",
+            "oracle",
+            "hyperion",
+            "bi",
+            "pig",
+            "power_bi",
+            "english",
+            "github",
+            "analysis",
+            "analytics",
+            "java",
+            "jee",
+            "hdfs",
+            "map_reduce",
+            "impala",
+            "machine_learning",
+            "design",
+            "architecture",
+            "ingestion",
+            "pipeline",
+            "modeling",
+            "mining",
+            "data_analyst",
+            "business_analytics",
+            "azure",
+            "customer",
+            "behavioral",
+            "migrating",
+            "cloud",
+            "hive",
+            "cluster",
+            "real_time",
+            "sql",
+            "warehouse",
+            "essbase",
+            "grid",
+            "hyperionbi",
+            "software_engineer",
+            "prediction",
+            "real_estate",
+            "website",
+            "valuation",
+            "estimate",
+            "advanced_analytics",
+            "economic",
+            "predict",
+            "future",
+            "trend",
+            "recommendation",
+            "c",
+            "cdh",
+            "hadoop_cluster",
+            "centos",
+            "tuning",
+            "monitoring",
+            "admin",
+            "mapreduce",
+            "job",
+            "data_cleaning",
+            "preprocessing",
+            "model",
+            "pig",
+            "postgresql",
+            "database",
+            "querying",
+            "testing",
+            "aws",
+            "amazon",
+            "web",
+            "automate",
+            "linear_regression",
+            "mllib",
+            "search",
+            "rest",
+            "api",
+            "jdbc",
+            "connectivity",
+            "shell",
+            "script",
+            "logging",
+            "report",
+            "data_quality",
+            "hue",
+            "browsing",
+            "programming",
+            "scripting",
+            "jsp",
+            "servlets",
+            "ejb",
+            "javascript",
+            "html",
+            "databases",
+            "nosql",
+            "eclipse",
+            "oxygen",
+            "maven",
+            "gradle",
+            "visual_studio",
+            "windows",
+            "xp",
+            "linux",
+            "cloudera",
+            "application",
+            "apache",
+            "tomcat",
+            "fundamental",
+            "ibm",
+            "programmer",
+            "csc",
+            "qspiders",
+            "animation"
+          ]
+        },
+        {
+          Name: "Monica Kadley",
+          Email: "",
+          Experience: "4",
+          Location: "",
+          Last_Emp: "",
+          Education: "Post Graduate",
+          Token: [
+            "marketing",
+            "developed",
+            "database",
+            "response",
+            "tracking",
+            "campaign",
+            "opera_signalhub",
+            "real_estate",
+            "estimator",
+            "predict",
+            "property",
+            "price",
+            "stacking",
+            "approach",
+            "prices",
+            "demand",
+            "forecasting",
+            "wellhead",
+            "spare",
+            "forecast",
+            "critical",
+            "spares",
+            "oil",
+            "arimax",
+            "model",
+            "product",
+            "power_bi",
+            "dashboard",
+            "sentiment_analysis",
+            "retail",
+            "crawl",
+            "user_review",
+            "mobile",
+            "phone",
+            "ecommerce",
+            "website",
+            "nlp",
+            "parasitic",
+            "event",
+            "prediction",
+            "r",
+            "well",
+            "moving",
+            "standard",
+            "deviation",
+            "logistic",
+            "consultant",
+            "data_analysis",
+            "visualization",
+            "enu",
+            "post_graduate",
+            "engineer",
+            "data_science",
+            "analytics",
+            "python",
+            "powerbi",
+            "excel",
+            "d3js",
+            "ui",
+            "ux",
+            "html",
+            "css",
+            "javascript",
+            "alteryx",
+            "time_series",
+            "analysis",
+            "natural_language_processing",
+            "gbm",
+            "regression",
+            "associate",
+            "data_scientist",
+            "consumer"
+          ]
+        },
+        {
+          Name: "JITUL NATH",
+          Email: "jitulnath@gmail.com",
+          Experience: "8",
+          Location: "Dubai",
+          Last_Emp: "Zaloni INC",
+          Education: "MCA ",
+          Token: [
+            "software",
+            "development",
+            "big_data",
+            "platform",
+            "engineer",
+            "designing",
+            "developing",
+            "troubleshooting",
+            "application",
+            "hadoop",
+            "framework",
+            "on_premise",
+            "cloud",
+            "java",
+            "service",
+            "product",
+            "dubai",
+            "develop",
+            "developer",
+            "agile",
+            "estimation",
+            "data_lake",
+            "data_warehouse",
+            "lake",
+            "analytics",
+            "real_time",
+            "data_analytics",
+            "bash",
+            "shell_scripting",
+            "python",
+            "windows",
+            "linux",
+            "cloudera",
+            "hortonworks",
+            "amazon",
+            "emr",
+            "azure",
+            "hdinsight",
+            "hdfs",
+            "mapreduce",
+            "hive",
+            "hbase",
+            "pig",
+            "sqoop",
+            "elastic",
+            "search",
+            "zookeeper",
+            "hcatalog",
+            "druid",
+            "spark",
+            "streaming",
+            "kafka",
+            "zaloni",
+            "data_platform",
+            "dataiku",
+            "trifacta",
+            "mica",
+            "j2ee",
+            "servlet",
+            "struts",
+            "jdbc",
+            "spring",
+            "hibernate",
+            "web",
+            "services",
+            "rest",
+            "mysql",
+            "oracle",
+            "teradata",
+            "kibana",
+            "power_bi",
+            "qlikview",
+            "talend",
+            "senior",
+            "software_engineer",
+            "poc",
+            "datalake",
+            "modernization",
+            "modernize",
+            "catalog",
+            "self_service",
+            "customers",
+            "analytic",
+            "data_quality",
+            "profiling",
+            "metadata",
+            "data_governance",
+            "blob",
+            "storage",
+            "zdp",
+            "api",
+            "management",
+            "well",
+            "playbooks",
+            "governance",
+            "model",
+            "cataloging",
+            "capability",
+            "customer",
+            "insights",
+            "loyalty",
+            "frequent_flyer",
+            "airline",
+            "analytical",
+            "reporting",
+            "fraud",
+            "prevention",
+            "data_science",
+            "member",
+            "lifecycle",
+            "requirement_gathering",
+            "lda",
+            "predictive_model",
+            "business_intelligence",
+            "data",
+            "repository",
+            "research",
+            "data_management",
+            "bedrock",
+            "consulting",
+            "deploy",
+            "design",
+            "telecom",
+            "technology",
+            "security",
+            "tokenization",
+            "etl",
+            "report",
+            "rdbms",
+            "visualization",
+            "apis",
+            "dashboard",
+            "emc",
+            "ingestion",
+            "relational",
+            "database",
+            "inventory",
+            "hadoop_cluster",
+            "enterprise",
+            "requirement",
+            "analysis",
+            "sdv",
+            "verification",
+            "uat",
+            "support",
+            "root",
+            "cause",
+            "rca",
+            "engineers",
+            "engineering",
+            "vendavo",
+            "develops",
+            "pricing",
+            "sfdc",
+            "fido",
+            "salesforce",
+            "crm",
+            "beanshell",
+            "workflow",
+            "jboss",
+            "weblogic",
+            "net",
+            "weaver",
+            "master",
+            "computer",
+            "mca",
+            "bachelor",
+            "science",
+            "physics",
+            "english",
+            "hindi",
+            "assamese",
+            "uae"
+          ]
+        },
+        {
+          Name: "MOHAMMAD JUBAIR AKHTAR",
+          Email: "jubair.akhtar@gmail.com",
+          Experience: "15",
+          Location: "Dubai",
+          Last_Emp: "Axa Gulf Insurance",
+          Education: "Bachelor of Technology ",
+          Token: [
+            "dubai",
+            "uae",
+            "bi",
+            "big_data",
+            "database",
+            "oracle",
+            "sql_server",
+            "sybase",
+            "hadoop",
+            "nosql",
+            "hbase",
+            "cassandra",
+            "tableau",
+            "ssrs",
+            "windows",
+            "unix",
+            "linux",
+            "c",
+            "java",
+            "perl",
+            "sql",
+            "pig",
+            "mapreduce",
+            "yarn",
+            "hive",
+            "spark",
+            "flume",
+            "kafka",
+            "sqoop",
+            "sdlc",
+            "smartex",
+            "trades",
+            "connected",
+            "car",
+            "trade",
+            "bachelor",
+            "technology",
+            "b_tech",
+            "indian",
+            "institute_technology",
+            "iit",
+            "electrical",
+            "engg",
+            "map_reduce",
+            "db",
+            "iot",
+            "cumulocity",
+            "lemetry",
+            "cloud",
+            "aws",
+            "python",
+            "scala",
+            "shell_scripting",
+            "pl",
+            "t",
+            "rdbms",
+            "m",
+            "mysql",
+            "tools",
+            "data",
+            "modeler",
+            "toad",
+            "etl",
+            "talend",
+            "unix_sun",
+            "solaris",
+            "window",
+            "matlab",
+            "cvs",
+            "svn",
+            "autosys",
+            "gloss",
+            "qa",
+            "testing",
+            "engineer",
+            "axa",
+            "data_lake",
+            "cloudera",
+            "xml",
+            "access",
+            "system",
+            "hadoop_hive",
+            "senior",
+            "architect",
+            "retail",
+            "customer",
+            "analytics",
+            "databricks",
+            "notebooks",
+            "marketing",
+            "real_time",
+            "funnel",
+            "mongodb",
+            "model",
+            "mongo",
+            "query",
+            "azure",
+            "sharding",
+            "scale",
+            "associate",
+            "abu",
+            "dhabi",
+            "engineering",
+            "telecom",
+            "streaming",
+            "batch",
+            "smart",
+            "city",
+            "security",
+            "hadoop_cluster",
+            "poc",
+            "dashboard",
+            "sentiment_analysis",
+            "edw",
+            "architecture",
+            "teradata",
+            "dwh",
+            "developer",
+            "banking",
+            "migration",
+            "on_premise",
+            "data_engineer",
+            "xenon",
+            "lead",
+            "tool",
+            "shell",
+            "tcp",
+            "obd",
+            "stored_procedures",
+            "trip",
+            "dtc",
+            "lementry",
+            "real_estate",
+            "mortgage",
+            "excel",
+            "report",
+            "reports",
+            "set",
+            "visualization",
+            "graphs",
+            "star",
+            "schema",
+            "wireframes",
+            "server",
+            "invoice",
+            "datawarehouse",
+            "logging",
+            "dba",
+            "log",
+            "data_analysis",
+            "apache",
+            "unstructured",
+            "pig_script",
+            "twitter",
+            "json",
+            "e_commerce",
+            "solr",
+            "window_xp",
+            "hierarchical",
+            "queries",
+            "technical",
+            "finance",
+            "liquidity",
+            "owb",
+            "code",
+            "load",
+            "bcp",
+            "front_end",
+            "coding",
+            "vb",
+            "tdw",
+            "ledger",
+            "consultant",
+            "audit",
+            "variance",
+            "new_york",
+            "data_warehouse",
+            "bloomberg",
+            "reuters",
+            "pricing",
+            "cycle",
+            "control_m",
+            "trading",
+            "weblogic",
+            "ping",
+            "price",
+            "algorithm",
+            "brokerage",
+            "script",
+            "regular_expression",
+            "string",
+            "search",
+            "genetic_algorithm"
+          ]
+        },
+        {
+          Name: "Karthik B",
+          Email: "rambuddh@gmail.com ",
+          Experience: "5",
+          Location: "India",
+          Last_Emp: "Deloitte Consulting India Pvt Ltd",
+          Education: "",
+          Token: [
+            "data",
+            "engineering",
+            "bigdata",
+            "consulting",
+            "customer",
+            "bi",
+            "report",
+            "dashboard",
+            "data_ingestion",
+            "data_engineering",
+            "agile",
+            "software",
+            "development",
+            "requirement_gathering",
+            "java",
+            "python",
+            "shell_scripting",
+            "scala",
+            "hive",
+            "hadoop",
+            "hdfs",
+            "apache",
+            "sqoop",
+            "pig",
+            "oozie",
+            "flume",
+            "mapreduce",
+            "kafka",
+            "spark",
+            "windows",
+            "linux",
+            "eclipse",
+            "elk",
+            "stack",
+            "power_bi",
+            "tableau",
+            "talend",
+            "oracle",
+            "sql_server",
+            "angular_js",
+            "js",
+            "d3js",
+            "html",
+            "php",
+            "consultant",
+            "senior",
+            "big_data",
+            "engineer",
+            "sql",
+            "scheduler",
+            "shell",
+            "ab_initio",
+            "migration",
+            "telecom",
+            "campaign",
+            "targeting",
+            "parallel",
+            "execution",
+            "udfs",
+            "automate",
+            "de_normalizing",
+            "analytics",
+            "unstructured_data",
+            "crm",
+            "vox",
+            "wav",
+            "scripts",
+            "acoustic",
+            "model",
+            "dictionary",
+            "transcription",
+            "elastic",
+            "search",
+            "logstash",
+            "kibana",
+            "sentiment_analysis",
+            "text_recognition",
+            "pocketsphinx",
+            "speech_recognition",
+            "statistical",
+            "representation",
+            "sound",
+            "language_model",
+            "probability",
+            "words",
+            "hidden",
+            "markovian",
+            "naive_bayes"
+          ]
+        },
+        {
+          Name: "ANJALI KRISHNA KASULA ",
+          Email: "anjukasula@gmail.com",
+          Experience: "4",
+          Location: "Hyderabad, India ",
+          Last_Emp: "Tata Consultancy Services ",
+          Education: "BTech",
+          Token: [
+            "senior",
+            "business_analyst",
+            "analytics",
+            "dashboard",
+            "work_force",
+            "attrition",
+            "revenue",
+            "lead",
+            "scrum_master",
+            "analyst",
+            "isometrix",
+            "causal_analysis",
+            "tableau",
+            "graphical",
+            "visualization",
+            "dashboards",
+            "testing",
+            "unit",
+            "level",
+            "integration",
+            "uat",
+            "sonar",
+            "qube",
+            "standard",
+            "python",
+            "r",
+            "analyze",
+            "analytic",
+            "charts",
+            "regression",
+            "ml",
+            "excel",
+            "oracle",
+            "pl_sql",
+            "uml",
+            "modeling",
+            "java",
+            "struts",
+            "html",
+            "css",
+            "sap",
+            "bods",
+            "tc",
+            "devplus",
+            "agile",
+            "devops",
+            "svn",
+            "ci",
+            "cd",
+            "health_care",
+            "data_science",
+            "sentiment_analysis",
+            "forecasting",
+            "data_cleaning",
+            "imputing",
+            "missing",
+            "value",
+            "fitting",
+            "technique",
+            "ibm",
+            "db",
+            "database",
+            "development",
+            "retail",
+            "waterfall",
+            "team_management",
+            "bug",
+            "fixes",
+            "hive",
+            "pig",
+            "spark",
+            "power",
+            "point",
+            "ppts",
+            "word",
+            "mastercraft",
+            "project",
+            "workbench",
+            "big_data",
+            "business_analytics",
+            "b_tech",
+            "computer_science"
+          ]
+        },
+        {
+          Name: "Libin Parameswar",
+          Email: "libinparameswar@gmail.com",
+          Experience: "7",
+          Location: "Dubai",
+          Last_Emp: "Emirates NBD ",
+          Education: "Btech",
+          Token: [
+            "dubai",
+            "software",
+            "development",
+            "analytical",
+            "problem_solving",
+            "sme",
+            "informatica",
+            "data_quality",
+            "big_data",
+            "pocs",
+            "rfps",
+            "data_governance",
+            "pre_sales",
+            "axon",
+            "edc",
+            "data_warehousing",
+            "etl",
+            "developer",
+            "analyst",
+            "mdm",
+            "manufacturing",
+            "logistics",
+            "retail",
+            "insurance",
+            "dw",
+            "sql",
+            "sql_server",
+            "oracle",
+            "databases",
+            "trillium",
+            "microsoft",
+            "toad",
+            "datawarehouse",
+            "idd",
+            "bdm",
+            "bdq",
+            "cloud",
+            "amazon_web_services",
+            "cloud_computing",
+            "linux",
+            "unix",
+            "banking",
+            "finance",
+            "metadata_extraction",
+            "partner",
+            "customer",
+            "aws",
+            "stack",
+            "idl",
+            "cleansing",
+            "standardizing",
+            "requirement_gathering",
+            "merge",
+            "cleanse",
+            "data_modeling",
+            "etl_developer",
+            "workflow",
+            "cleanser",
+            "matcher",
+            "converter",
+            "parser",
+            "router",
+            "b_tech",
+            "computer_science"
+          ]
+        },
+        {
+          Name: "KRISHNAVENI MARI",
+          Email: "marikrishnaveni@gmail.com",
+          Experience: "5",
+          Location: "Bangalore",
+          Last_Emp: "Tata Consultancy Services ",
+          Education: "MSc",
+          Token: [
+            "statistical",
+            "business_analyst",
+            "analytic",
+            "r",
+            "linear_regression",
+            "logistic_regression",
+            "predicting",
+            "retail",
+            "fmcg",
+            "cpg",
+            "microsoft_office",
+            "data_analysis",
+            "pivot",
+            "model",
+            "regression",
+            "sale",
+            "forecasting",
+            "r_studio",
+            "base_sas",
+            "sql",
+            "trend",
+            "outlier",
+            "customer",
+            "analytics",
+            "reporting",
+            "estimating",
+            "driver",
+            "multiple_regression",
+            "risk",
+            "probability",
+            "default",
+            "bills",
+            "modeling",
+            "data",
+            "segmenting",
+            "summary",
+            "segment",
+            "windows",
+            "predictive",
+            "logistic",
+            "time_series",
+            "arima",
+            "msc",
+            "statistics",
+            "computer_applications",
+            "mathematics",
+            "computer_science",
+            "automated"
+          ]
+        },
+        {
+          Name: "MAYURI PRABHAKAR",
+          Email: "mayuriprabhakar27@gmail.com",
+          Experience: "4",
+          Location: "Noida",
+          Last_Emp: "HCL Technologies",
+          Education: "PG diploma",
+          Token: [
+            "analytical",
+            "statistics",
+            "machine_learning",
+            "requirement_gathering",
+            "development",
+            "testing",
+            "debugging",
+            "deployment",
+            "documentation",
+            "production",
+            "data_analytics",
+            "btech",
+            "information_technology",
+            "customers",
+            "hr_analytics",
+            "logistic_regression",
+            "attrition",
+            "demand",
+            "forecast",
+            "forecasted",
+            "sale",
+            "decomposition",
+            "auto_arima",
+            "arima",
+            "value",
+            "work",
+            "experience",
+            "lead_engineer",
+            "r",
+            "tableau",
+            "acquisition",
+            "java",
+            "sql",
+            "migration",
+            "xml",
+            "etl",
+            "excel",
+            "business_requirement",
+            "uat",
+            "modelling",
+            "inferential",
+            "descriptive",
+            "statistic",
+            "pl_sql",
+            "visualisation",
+            "database",
+            "oracle",
+            "lead",
+            "engineer"
+          ]
+        },
+        {
+          Name: "MOSTAFA ASHRAF SHEHATA",
+          Email: "mostafaashraf413@yahoo.com",
+          Experience: "6",
+          Location: "UAE",
+          Last_Emp: "Etisalat",
+          Education: "MSc",
+          Token: [
+            "dubai",
+            "uae",
+            "data_scientist",
+            "machine_learning",
+            "deep_learning",
+            "nlp",
+            "computer_vision",
+            "recommender",
+            "systems",
+            "information_retrieval",
+            "python",
+            "qatar",
+            "research_assistant",
+            "big_data",
+            "graph",
+            "analytics",
+            "text_mining",
+            "java",
+            "metaheuristic",
+            "optimization",
+            "weka",
+            "trendak",
+            "engineer",
+            "arabic",
+            "sentiment_analysis",
+            "semantic",
+            "web",
+            "kngine",
+            "software_engineer",
+            "apache",
+            "lucene",
+            "orange",
+            "lab",
+            "cairo",
+            "egypt",
+            "developing",
+            "graph_database",
+            "neoj",
+            "matlab",
+            "msc",
+            "computer",
+            "information",
+            "bsc",
+            "artificial_intelligence",
+            "natural_language_processing",
+            "recommender_system",
+            "linear_algebra",
+            "simulated",
+            "matrix_factorization",
+            "collaborative_filtering",
+            "computer_science",
+            "etisalat",
+            "recommendations",
+            "semantic_similarity",
+            "association",
+            "rules",
+            "autoencoder",
+            "nltk",
+            "sql",
+            "doc2vec",
+            "numpy",
+            "matplotlib",
+            "gensim",
+            "pytorch",
+            "face",
+            "similarity",
+            "learning",
+            "train",
+            "model",
+            "keras",
+            "tensorflow",
+            "siamese",
+            "network",
+            "cnn",
+            "nlu",
+            "chatbot",
+            "intent",
+            "detection",
+            "regular_expression",
+            "natural_language_understanding",
+            "lstm",
+            "ocr",
+            "tokenization",
+            "crf",
+            "diacritization",
+            "predicting",
+            "libsvm",
+            "signlator",
+            "c",
+            "android",
+            "dynamic_pricing",
+            "cdr",
+            "probabilities",
+            "statistical",
+            "analyzer",
+            "creating",
+            "text_classification",
+            "ivr",
+            "math",
+            "ilab",
+            "neo4j",
+            "database",
+            "servlet",
+            "jsp",
+            "vehicle_routing_problem",
+            "cellular",
+            "genetic_algorithm",
+            "combinatorial"
+          ]
+        }
+      ];
+
+      function drawGraph(nodes, links) {
+        function getNeighbors(node) {
+          return links.reduce(
+            function(neighbors, link) {
+              if (link.target.id === node.id) {
+                neighbors.push(link.source.id);
+              } else if (link.source.id === node.id) {
+                neighbors.push(link.target.id);
+              }
+              return neighbors;
+            },
+            [node.id]
+          );
+        }
+
+        function getNeighborsNode(node) {
+          return links.reduce(
+            function(neighbors, link) {
+              if (link.target.id === node.id) {
+                neighbors.push(link.source.id);
+              } else if (link.source.id === node.id) {
+                neighbors.push(link.target.id);
+              }
+              return neighbors;
+            },
+            [node]
+          );
+        }
+
+        function isNeighborLink(node, link) {
+          return link.target.id === node.id || link.source.id === node.id;
+        }
+
+        function getNodeColor(node, neighbors) {
+          if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
+            return node.group === 1 ? "#00897B" : "#43A047";
+          }
+
+          if (node.level >= 25 && node.level <= 35) {
+            return "#e53935";
+          } else if (node.level >= 10 && node.level <= 24) {
+            return "#FFA726";
+          }
+
+          return node.group === 1 ? "#D84315" : "gray";
+        }
+
+        function getNodeColorSelect(node, neighbors) {
+          if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
+            return node.group === 1 ? "#00897B" : "#43A047";
+          }
+
+          if (node.level >= 25 && node.level <= 35) {
+            return "rgba(229,57,53,0.2)";
+          } else if (node.level >= 10 && node.level <= 24) {
+            return "rgba(255,167,38,0.2)";
+          }
+
+          return node.group === 1 ? "rgba(216,67,21,0.2)" : "gray";
+        }
+
+        function getNodeSize(node) {
+          var size = 10;
+
+          if (node.level >= 25 && node.level <= 35) {
+            size = 30;
+          } else if (node.level >= 10 && node.level <= 24) {
+            size = 20;
+          }
+
+          return size;
+        }
+
+        function getLinkColor(node, link) {
+          return isNeighborLink(node, link) ? "green" : "#E5E5E5";
+        }
+
+        function getTextColor(node, neighbors) {
+          return Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1
+            ? "black"
+            : "#455A64";
+        }
+
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+
+        var svg = d3.select("svg");
+        svg.attr("width", 800).attr("height", 400);
+
+        // simulation setup with all forces
+        var linkForce = d3
+          .forceLink()
+          .id(function(link) {
+            return link.id;
+          })
+          .strength(function(link) {
+            return link.strength;
+          });
+
+        var simulation = d3
+          .forceSimulation()
+          .force("link", linkForce)
+          .force("charge", d3.forceManyBody().strength(-300))
+          .force("center", d3.forceCenter(width / 2, height / 2))
+          .force("collision", d3.forceCollide().radius(getNodeSize));
+
+        var dragDrop = d3
+          .drag()
+          .on("start", function(node) {
+            node.fx = node.x;
+            node.fy = node.y;
+          })
+          .on("drag", function(node) {
+            simulation.alphaTarget(0.7).restart();
+            node.fx = d3.event.x;
+            node.fy = d3.event.y;
+          })
+          .on("end", function(node) {
+            if (!d3.event.active) {
+              simulation.alphaTarget(0);
+            }
+            node.fx = null;
+            node.fy = null;
+          });
+
+        function drawTable(node) {
+          var tablePro = document.getElementById("selectedProfiles");
+          var tabletd = document.getElementById("tbody1");
+          tabletd.innerHTML = "";
+          tablePro.style.display = "";
+
+          selectedResumes = [];
+
+          resumes.map(resume => {
+            console.log(resume.Name + " " + resume.Last_Emp);
+            node.map(n => {
+              if (
+                resume.Token.indexOf(n) > -1 &&
+                selectedResumes.indexOf(resume) < 0
+              ) {
+                selectedResumes.push(resume);
+              }
+            });
+          });
+
+          selectedResumes.forEach(e => {
+            // console.log(e);
+            tabletd.innerHTML +=
+              "<tr>" +
+              "<td>" +
+              '<div class="d-flex no-block align-items-center">' +
+              '<div class="m-r-10"><img src="demos/admin-templates/xtreme-admin/html/mini-sidebar/../../assets/images/users/d1.jpg" alt="user" class="rounded-circle" width="45" /></div>' +
+              '<div class="">' +
+              '<h5 class="m-b-0 font-16 font-medium">' +
+              e.Name +
+              "</h5><span>" +
+              e.Email +
+              "</span></div>" +
+              "</div>" +
+              "</td>" +
+              '<td style="overflow:hidden;width:50px;word-wrap:break-word">' +
+              node.join(",") +
+              "</td>" +
+              "<td>" +
+              e.Experience +
+              "</td>" +
+              "<td>" +
+              e.Last_Emp +
+              "</td>" +
+              "<td>" +
+              e.Location +
+              "</td>" +
+              '<td class="blue-grey-text  text-darken-4 font-medium">' +
+              e.Education +
+              "</td>" +
+              "</tr>";
+          });
+        }
+
+        function selectNode(selectedNode) {
+          var neighbors = getNeighbors(selectedNode);
+          var neighborsNode = getNeighborsNode(selectedNode);
+
+          // we modify the styles to highlight selected nodes
+          nodeElements.attr("fill", function(node) {
+            return getNodeColorSelect(node, neighbors);
+          });
+          textElements.attr("fill", function(node) {
+            return getTextColor(node, neighbors);
+          });
+          linkElements.attr("stroke", function(link) {
+            return getLinkColor(selectedNode, link);
+          });
+
+          drawTable(neighbors);
+        }
+
+        var linkElements = svg
+          .append("g")
+          .attr("class", "links")
+          .selectAll("line")
+          .data(links)
+          .enter()
+          .append("line")
+          .attr("stroke-width", 1)
+          .attr("stroke", "rgba(50, 50, 50, 0.2)");
+
+        var nodeElements = svg
+          .append("g")
+          .attr("class", "nodes")
+          .selectAll("circle")
+          .data(nodes)
+          .enter()
+          .append("circle")
+          .attr("r", getNodeSize)
+          .attr("fill", getNodeColor)
+          .call(dragDrop)
+          .on("click", selectNode);
+
+        var textElements = svg
+          .append("g")
+          .attr("class", "texts")
+          .selectAll("text")
+          .data(nodes)
+          .enter()
+          .append("text")
+          .text(function(node) {
+            return node.label;
+          })
+          .attr("font-size", 15)
+          .attr("dx", 15)
+          .attr("dy", 4);
+
+        simulation.nodes(nodes).on("tick", () => {
+          nodeElements
+            .attr("cx", function(node) {
+              return node.x;
+            })
+            .attr("cy", function(node) {
+              return node.y;
+            });
+          textElements
+            .attr("x", function(node) {
+              return node.x;
+            })
+            .attr("y", function(node) {
+              return node.y;
+            });
+          linkElements
+            .attr("x1", function(link) {
+              return link.source.x;
+            })
+            .attr("y1", function(link) {
+              return link.source.y;
+            })
+            .attr("x2", function(link) {
+              return link.target.x;
+            })
+            .attr("y2", function(link) {
+              return link.target.y;
+            });
+        });
+
+        simulation.force("link").links(links);
+      }
+
+      function callgraph() {
+        var tablePro = document.getElementById("selectedProfiles");
+        tablePro.style.display = "none";
+        document.getElementById("graph").innerHTML = "";
+
+        var nodesName = [];
+
+        nodes.map(e => {
+          nodesName.push(e.id);
+        });
+
+        $("#tags").autocomplete({
+          source: nodesName
+        });
+
+        if(selectedNodesFilter.length>0)
+        {
+
+            var newLinks = links.filter( n => {
+                return (selectedNodesFilter.indexOf(n.source.id) > -1 || 
+                        selectedNodesFilter.indexOf(n.target.id) > -1)
+            });
+
+            console.log(newLinks);
+
+            var tempNodes = [];
+
+            newLinks.map( n => {
+                tempNodes.push(n.source.id);
+            })
+
+            newLinks.map( n => {
+                tempNodes.push(n.target.id);
+            })
+
+            var newNodes = nodes.filter( n => {
+                return (tempNodes.indexOf(n.id) > -1)
+            });
+
+            drawGraph(newNodes, newLinks);
+        }
+        else
+            drawGraph(nodes, links);            
+
+      }
+
+      function skillFilter(){
+            var text = document.getElementById('tags').value;
+            if(text!="" && selectedNodesFilter.indexOf(text)==-1)
+                selectedNodesFilter.push(text);
+            document.getElementById('filterTags').innerHTML="";
+            selectedNodesFilter.map( n => {
+                document.getElementById('filterTags').innerHTML += '<div class="col-lg-2" style="padding: 0px;text-align:center">'+
+                            '<div id="filterTags" class="col-lg-12" style="padding:35px 0px 0px 0px">'+
+                                '<span style="height:65px;font-size:15px;font-weight: bolder;padding:5px;background:#009688;Color:#fff"> '+ n +' <i class="far fa-trash-alt" onClick="deleteTag(event)"></i></span>'+
+                            '</div>'+
+                        '</div>';
+            });
+            document.getElementById('tags').value=""; 
+            callgraph();                 
+      }
+
+      function deleteTag(event){
+        var deleteNode=event.target.parentElement.innerText;
+        var newSelectedArray = selectedNodesFilter.filter( n => {
+                return n!=deleteNode.replace(/\s/g,'');
+        });
+        selectedNodesFilter=newSelectedArray;
+        console.log(selectedNodesFilter.length);
+        skillFilter();
+      }
+
+      callgraph();
+    </script>
+  </body>
+</html>
